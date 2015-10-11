@@ -1,0 +1,4 @@
+Sitemap: https://minhoryang.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: minhoryang.github.io

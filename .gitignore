@@ -1,0 +1,12 @@
+# nikola
+.doit.db
+cache/
+
+# python
+__pycache__/
+*.py[cod]
+
+# vim
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+
