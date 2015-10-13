@@ -7,61 +7,71 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://minhoryang.github.io/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/2015/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/archive.html</loc>
-  <lastmod>2015-10-11T11:58:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/nikola/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/en/posts/scalable-stateful-services/</loc>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/scalable-stateful-services/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/todo/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/todo/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/2015/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/archive.html</loc>
-  <lastmod>2015-10-11T11:58:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/nikola/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/annyeonghaseyo/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/annyeonghaseyo/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/ko/posts/scalable-stateful-services/</loc>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/scalable-stateful-services/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/ko/posts/todo/</loc>
-  <lastmod>2015-10-11T11:57:00Z</lastmod>
+  <lastmod>2015-10-13T13:06:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/todo/" />
  </url>
 </urlset>
