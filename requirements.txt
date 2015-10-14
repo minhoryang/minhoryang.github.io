@@ -1,4 +1,5 @@
 nikola  # needs 'libjpeg'
 jinja2
 webassets
+misaka
 

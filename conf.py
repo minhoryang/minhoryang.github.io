@@ -40,19 +40,22 @@ THEME = "zen-jinja"
 POSTS = (
     ("posts/*.rst", "posts", "post.tmpl"),
     ("posts/*.txt", "posts", "post.tmpl"),
+    ("posts/*.md", "posts", "post.tmpl"),
 )
 PAGES = (
     ("stories/*.rst", "stories", "story.tmpl"),
     ("stories/*.txt", "stories", "story.tmpl"),
+    ("stories/*.md", "stories", "story.tmpl"),
 )
 
 TIMEZONE = "Asia/Seoul"
 
 COMPILERS = {
     "rest": ('.rst', '.txt'),
-    "markdown": ('.md', '.mdown', '.markdown'),
-    "html": ('.html', '.htm'),
+    "misaka": ('.md', '.mdown', '.markdown'),
+    #"html": ('.html', '.htm'),
 }
+#MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra']
 
 SHOW_BLOG_TITLE = False
 WRITE_TAG_CLOUD = True
@@ -82,14 +85,6 @@ DEPLOY_COMMANDS = {
         "git subtree push --prefix output origin master",
     ]
 }
-
-# For user.github.io OR organization.github.io pages, the DEPLOY branch
-# MUST be 'master', and 'gh-pages' for other repositories.
-#GITHUB_SOURCE_BRANCH = 'master'
-#GITHUB_DEPLOY_BRANCH = 'gh-pages'
-
-# The name of the remote where you wish to push to, using github_deploy.
-#GITHUB_REMOTE_NAME = 'origin'
 
 # Filters to apply to the output.
 # A directory where the keys are either: a file extensions, or
