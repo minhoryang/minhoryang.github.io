@@ -6,37 +6,10 @@ body {background: url('//minhoryang.github.io/images/blue-mocha-grunge.jpg') #19
 	</head>
 	<body>
 		<form id="languageselect"></form>
-	</body>
-	<script>
-		(function(){
-		  if ('localStorage' in window) {
-		    var locales = {
-			'en': {label: 'English',location:'en/'},
-			'ko': {label: 'Korean',location: 'ko/'},
-		    };
-		    var currentlocale = window.localStorage.locale || 'en';
-		    var selectorContainer = document.querySelector('#languageselect');
-		    selectorContainer.innerHTML = '<label for="languageselectdd">'+
-						  'Select Language</label>';
-		    var selector = document.createElement('select');
-		    selector.name = 'language';
-		    selector.id = 'languageselectdd';
-		    var html = '';
-		    for (var i in locales) {
-		      var selected = (i === currentlocale) ? 'selected' : '';
-			html += '<option value="'+i+'" '+selected+'>'+
-				 locales[i].label+'</option>';
-		    }
-		    selector.innerHTML = html;
-		    selectorContainer.appendChild(selector);
-		    selectorContainer.innerHTML += '<input type="submit" value="go">';
-		    selectorContainer.addEventListener('submit', function(ev) {
-		      var currentlocale = this.querySelector('select').value;
-		      window.localStorage.locale = currentlocale;
-		      alert('Redirect to: '+locales[currentlocale].location);
-		      ev.preventDefault();
-		    }, false);
-		  }
-		})();
+	<script type='text/javascript'>
+<!--
+location.href='https://minhoryang.github.io/ko/';
+//-->
 	</script>
+	</body>
 </html>

@@ -7,11 +7,11 @@
 .. description: 
 .. type: text
 
-1. Index ko/en
+1. Index ko/en  --  done
 2. Travis-ci Deployable
 3. Locale Change Icon
 
    A. font-awesome update
 
-4. Ask Me Anything Branch.
+4. Ask Me Anything Branch  --  done.
 0. ADD MORE!
