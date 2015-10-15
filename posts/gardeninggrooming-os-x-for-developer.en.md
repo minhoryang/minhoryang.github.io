@@ -100,7 +100,7 @@ xz
 `https://gist.github.com/342b10d7609679d8c566.git miloshadzic-minhoryang`  ([theme](https://gist.github.com/342b10d7609679d8c566.git))
 
 -----
-### vim: [vundle](https://github.com/VundleVim/Vundle.vim)
+### vim: ~~[vundle](https://github.com/VundleVim/Vundle.vim)~~ [vim-plug](https://github.com/junegunn/vim-plug)
 
 `set backspace=2`
 
