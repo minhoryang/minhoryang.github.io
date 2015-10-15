@@ -93,7 +93,34 @@ article: http://ogp.me/ns/article#
                 
             </div>
             <div class="body">
-                <p>내가 잘 할 수 있겠지?</p>
+                <div>
+<p>내가 잘 할 수 있겠지? 에구구구.</p>
+<ul>
+<li>
+<p class="first">새 환경으로 옮긴다면:</p>
+<blockquote>
+<p>Initialize the environment:</p>
+<blockquote>
+<p>$ pyenv install 3.4.2</p>
+<p>$ pyenv virtualenv 3.4.2 3.4.2-blog</p>
+<p>$ pyenv local 3.4.2-blog</p>
+<p>$ pip install --upgrade -r requirement.txt</p>
+<p>$ pip install --upgrade -r requirement-dev.txt  # for live-reloading.</p>
+</blockquote>
+<p>After branching 'source' and 'master',</p>
+<blockquote>
+<p>$ git push origin <cite>git subtree split --prefix output master</cite>:master --force</p>
+</blockquote>
+<p>new post:</p>
+<blockquote>
+<p>$ nikola new_post -f misaka  # misaka: Markdown Module</p>
+<p>$ nikola auto</p>
+<p>$ nikola deploy</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</div>
             </div>
         </div>
     
