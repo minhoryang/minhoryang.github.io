@@ -95,9 +95,9 @@ xz
 
 `rimraf/k` ([link](https://github.com/rimraf/k))
 
-`https://gist.github.com/2355834.git` ([git_prompt_info](https://gist.github.com/2355834.git))
+`https://gist.github.com/2355834.git` ([git_prompt_info](https://gist.github.com/msabramo/2355834))
 
-`https://gist.github.com/342b10d7609679d8c566.git miloshadzic-minhoryang`  ([theme](https://gist.github.com/342b10d7609679d8c566.git))
+`https://gist.github.com/342b10d7609679d8c566.git miloshadzic-minhoryang`  ([theme](https://gist.github.com/minhoryang/342b10d7609679d8c566))
 
 -----
 ### vim: ~~[vundle](https://github.com/VundleVim/Vundle.vim)~~ [vim-plug](https://github.com/junegunn/vim-plug)
