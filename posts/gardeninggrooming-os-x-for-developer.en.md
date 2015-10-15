@@ -1,5 +1,5 @@
 <!-- 
-.. title: Gardening/Grooming OS X for developer
+.. title: Gardening/Grooming My OS X Environment
 .. slug: gardeninggrooming-os-x-for-developer
 .. date: 2015-10-15 19:10:22 UTC+09:00
 .. tags: brew, cask, docker, osx, pyenv, xcode, rootless, preferences, settings
@@ -9,16 +9,14 @@
 .. type: text
 -->
 
-# Gardening/Grooming My OS X Environment
-
 ## Clean Install OS X Latest
 with Recovery Partition
 
 -----
 ## App Store
-Kakaotalk.app
+~~Kakaotalk.app~~
 **Microsoft Remote Desktop.app**
-Movist.app
+~~Movist.app~~
 **Realm Browser.app**
 **Slack.app**
 **Xcode.app**
@@ -119,7 +117,7 @@ xz
 ## [brew cask](http://caskroom.io/)
 **betterzipql**
 cert-quicklook
-**chromecast**
+~~chromecast~~
 **cloud**
 **cyberduck**
 **fabric**
@@ -132,7 +130,7 @@ cert-quicklook
 **launchrocket**
 **macs-fan-control**
 **mou**
-navicat-for-postgresql
+~~navicat-for-postgresql~~
 **ngrok**
 **pgadmin3**
 **postgres**
@@ -147,7 +145,8 @@ quicklook-json
 
 -----
 ### chrome extensions
-,
+~~google cast~~
+pushbullet
 
 -----
 ### spectacle.app
