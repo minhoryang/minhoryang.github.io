@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/archive.html</loc>
-  <lastmod>2015-10-15T13:15:00Z</lastmod>
+  <lastmod>2015-10-16T11:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/</loc>
@@ -119,7 +119,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/archive.html</loc>
-  <lastmod>2015-10-15T13:15:00Z</lastmod>
+  <lastmod>2015-10-16T11:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/</loc>
@@ -203,6 +203,11 @@
   <loc>https://minhoryang.github.io/ko/posts/gardeninggrooming-os-x-for-developer/</loc>
   <lastmod>2015-10-15T13:15:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/gardeninggrooming-os-x-for-developer/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/posts/oh-my-build/</loc>
+  <lastmod>2015-10-16T11:57:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/oh-my-build/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/todo/</loc>
