@@ -15,6 +15,6 @@
   - font-awesome update
 - ~~Ask Me Anything Branch~~
 - ~~Markdown~~
-- New Tags: I_Read_It, I_Read_It_But_I_Dont_Get_It, At_Hacker_News, At_Github_Explore, At_My_Github_Stars, ...
+- New Tags: ~~I_Read_It~~, ~~I_Heard_It~~, I_Read_It_But_I_Dont_Get_It, At_Hacker_News, At_Github_Explore, At_My_Github_Stars, ...
 - ADD MORE!
 
