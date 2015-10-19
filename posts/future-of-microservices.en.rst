@@ -1,1 +1,0 @@
-scalable-stateful-services.rst
