@@ -123,6 +123,16 @@
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/annyeonghaseyo/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/en/posts/apple-app-store-review-guidelines-i_read_it/</loc>
+  <lastmod>2015-10-19T12:00:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/apple-app-store-review-guidelines-i_read_it/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/en/posts/cloudampq-rabbitmq-aas-i_heard_it/</loc>
+  <lastmod>2015-10-19T12:00:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/cloudampq-rabbitmq-aas-i_heard_it/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/en/posts/future-of-microservices-paradigm/</loc>
   <lastmod>2015-10-15T07:15:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/future-of-microservices-paradigm/" />

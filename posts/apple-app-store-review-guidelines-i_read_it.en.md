@@ -1,0 +1,1 @@
+apple-app-store-review-guidelines-i_read_it.md
