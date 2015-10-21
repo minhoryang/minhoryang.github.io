@@ -15,6 +15,8 @@
 - [Amazon Web Services](https://aws.amazon.com/ko/free/) (PaaS)
 	- 1yr for freetier:
 		- EC2(Computing) t2.micro
+			- Burst Mode라고 CPU Credit을 관리해 줘야한다
+			- 그러니까 찰랑찰랑하게는 오래 쓸 수 있지만, 오버파워하게는 얼마 못가게 쓰라고 하는 것
 		- EBS(Computing Storage) 30GiB
 		- S3(Object Storage) 5GiB (Get 2만건, Put 2천건)
 		- RDS(DB) t2.micro 20GiB + 백업용 20GiB
@@ -86,6 +88,7 @@
 - [Disqus](https://disqus.com) (Web Commenting)
 	- 무료임
 	- [API](https://disqus.com/api/docs/) 지원 함 ([Quota 는 한시간에 1000개](https://help.disqus.com/customer/portal/articles/1104798))
+	- RSS도 지원하는데 이게 어느정도까지인지는 모르겠다. Quota는 공유하는듯?
 	- [UI를 CSS로 조금 수정 가능](https://help.disqus.com/customer/portal/articles/545277)
 	- [큰 사이트들은 Export XML이 안된다고 함](https://help.disqus.com/customer/en/portal/articles/1104797-importing-exporting)
 
@@ -109,6 +112,9 @@
 	- 한달뒤부터 지원할 듯
 	- 분명 지원안하는 구형 브라우저가 있을 듯
 
+- [IFTTT](https://ifttt.com) (If This then That)
+	- 내사랑 트리거
+
 - 마지막으론, 당연히 [Slack](https://slack.com/pricing) (Chat)
 	- 대화기록 만개 검색가능
 	- 10개의 Service Integration 지원 (중요하니 영어로)
@@ -124,5 +130,40 @@
 - https://www.producthunt.com/@hnshah/collections/free-stuff-for-startups
 
 ### 그러니까 나는
-AWS에서 필요한 거는 CloudFormation을 통해 JSON으로 묶어서 이를 Github에 올려서 잘 관리하면 되려나, 그리고 1년마다 바꿔주고 (되게 나쁜생각)
+- AWS에서 필요한 거는 CloudFormation을 통해 JSON으로 묶어서 이를 Github에 올려서 잘 관리하면 되려나, 그리고 1년마다 바꿔주고 (되게 나쁜생각)
+- EC2에서 필요한건 Docker 같은걸로 관리하고, Github에 보관하면 좋을듯, OS도 CoreOS같은거 쓰면 굳이 우리가 Deploy할 필요가 없음
+- 이런 팁이 더 없나? 나중에 이어서 써보겠습니다.
 
+#### 지금 만들려고 하는 타겟 프로덕트가
+- 위키같이 항목이 많고,
+- 매 항목마다 댓글을 달 수 있고,
+- 댓글에 업 다운이 가능하며,
+- 업 댓글이 많은 걸 베스트로 삼아서,
+- 그 항목의 설명으로 포함되게 하는 것.
+
+#### 이걸 이렇게 엮어서 해결 하면 안될까?
+- 위의 시스템에서 실시간성을 좀 포기하면 될 것 같은데.
+- 웹페이지는 Github Pages로 서빙해서
+- CloudFlare로 CDN걸고 (DDoS도 방어해주겠지)
+- 댓글과 업다운은 Disqus를 통해서 해결하고 (트래픽도 너네가 담당좀ㅋ 고멘)
+- 우리가 주기적으로, (아마 하루에 한번을 원할테지만)
+	- IFTTT + Disqus RSS (daily diff를 rss로 제공해주나)
+	- Sealion (엌ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ)
+	- Travis CI
+	- ...
+- 어딘가에서, Disqus의 댓글과 업다운 현황을 긁어서,
+	- AWS EC2
+	- AWS Lamdba (근데 이건 짧은 시간밖에 안된다고 들었는데)
+	- Parse 
+	- Heroku
+	- ...
+- 등에서, 무엇의 도움을 받아 Like 숫자에 따라 재 편성하고,
+	- AWS EC2 In-memory
+	- AWS RDS DB (SQL)
+	- AWS DynamoDB (NoSQL)
+	- MongoLab MongoDB (NoSQL)
+	- Google Drive Sheet (오예~ㅋㅋㅋㅋㅋ)
+- 그 결과를 Static Blogging의 형태로 다시 저장하여
+- 이를 Github Pages에 다시 푸시.
+
+말이 되는 시나리오인가?

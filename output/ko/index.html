@@ -57,7 +57,13 @@ article: http://ogp.me/ns/article#
 <li>1yr for freetier:
 
 <ul>
-<li>EC2(Computing) t2.micro</li>
+<li>EC2(Computing) t2.micro
+
+<ul>
+<li>Burst Mode라고 CPU Credit을 관리해 줘야한다</li>
+<li>그러니까 찰랑찰랑하게는 오래 쓸 수 있지만, 오버파워하게는 얼마 못가게 쓰라고 하는 것</li>
+</ul>
+</li>
 <li>EBS(Computing Storage) 30GiB</li>
 <li>S3(Object Storage) 5GiB (Get 2만건, Put 2천건)</li>
 <li>RDS(DB) t2.micro 20GiB + 백업용 20GiB</li>
@@ -200,6 +206,7 @@ article: http://ogp.me/ns/article#
 <li>무료임</li>
 <li>
 <a href="https://disqus.com/api/docs/">API</a> 지원 함 (<a href="https://help.disqus.com/customer/portal/articles/1104798">Quota 는 한시간에 1000개</a>)</li>
+<li>RSS도 지원하는데 이게 어느정도까지인지는 모르겠다. Quota는 공유하는듯?</li>
 <li><a href="https://help.disqus.com/customer/portal/articles/545277">UI를 CSS로 조금 수정 가능</a></li>
 <li><a href="https://help.disqus.com/customer/en/portal/articles/1104797-importing-exporting">큰 사이트들은 Export XML이 안된다고 함</a></li>
 </ul>
@@ -249,6 +256,13 @@ article: http://ogp.me/ns/article#
 </ul>
 </li>
 <li>
+<p><a href="https://ifttt.com">IFTTT</a> (If This then That)</p>
+
+<ul>
+<li>내사랑 트리거</li>
+</ul>
+</li>
+<li>
 <p>마지막으론, 당연히 <a href="https://slack.com/pricing">Slack</a> (Chat)</p>
 
 <ul>
@@ -274,7 +288,60 @@ article: http://ogp.me/ns/article#
 </ul>
 <h4>그러니까 나는</h4>
 
-<p>AWS에서 필요한 거는 CloudFormation을 통해 JSON으로 묶어서 이를 Github에 올려서 잘 관리하면 되려나, 그리고 1년마다 바꿔주고 (되게 나쁜생각)</p>
+<ul>
+<li>AWS에서 필요한 거는 CloudFormation을 통해 JSON으로 묶어서 이를 Github에 올려서 잘 관리하면 되려나, 그리고 1년마다 바꿔주고 (되게 나쁜생각)</li>
+<li>EC2에서 필요한건 Docker 같은걸로 관리하고, Github에 보관하면 좋을듯, OS도 CoreOS같은거 쓰면 굳이 우리가 Deploy할 필요가 없음</li>
+<li>이런 팁이 더 없나? 나중에 이어서 써보겠습니다.</li>
+</ul>
+<h5>지금 만들려고 하는 타겟 프로덕트가</h5>
+
+<ul>
+<li>위키같이 항목이 많고,</li>
+<li>매 항목마다 댓글을 달 수 있고,</li>
+<li>댓글에 업 다운이 가능하며,</li>
+<li>업 댓글이 많은 걸 베스트로 삼아서,</li>
+<li>그 항목의 설명으로 포함되게 하는 것.</li>
+</ul>
+<h5>이걸 이렇게 엮어서 해결 하면 안될까?</h5>
+
+<ul>
+<li>위의 시스템에서 실시간성을 좀 포기하면 될 것 같은데.</li>
+<li>웹페이지는 Github Pages로 서빙해서</li>
+<li>CloudFlare로 CDN걸고 (DDoS도 방어해주겠지)</li>
+<li>댓글과 업다운은 Disqus를 통해서 해결하고 (트래픽도 너네가 담당좀ㅋ 고멘)</li>
+<li>우리가 주기적으로, (아마 하루에 한번을 원할테지만)
+
+<ul>
+<li>IFTTT + Disqus RSS (daily diff를 rss로 제공해주나)</li>
+<li>Sealion (엌ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ)</li>
+<li>Travis CI</li>
+<li>...</li>
+</ul>
+</li>
+<li>어딘가에서, Disqus의 댓글과 업다운 현황을 긁어서,
+
+<ul>
+<li>AWS EC2</li>
+<li>AWS Lamdba (근데 이건 짧은 시간밖에 안된다고 들었는데)</li>
+<li>Parse </li>
+<li>Heroku</li>
+<li>...</li>
+</ul>
+</li>
+<li>등에서, 무엇의 도움을 받아 Like 숫자에 따라 재 편성하고,
+
+<ul>
+<li>AWS EC2 In-memory</li>
+<li>AWS RDS DB (SQL)</li>
+<li>AWS DynamoDB (NoSQL)</li>
+<li>MongoLab MongoDB (NoSQL)</li>
+<li>Google Drive Sheet (오예~ㅋㅋㅋㅋㅋ)</li>
+</ul>
+</li>
+<li>그 결과를 Static Blogging의 형태로 다시 저장하여</li>
+<li>이를 Github Pages에 다시 푸시.</li>
+</ul>
+<p>말이 되는 시나리오인가?</p>
 </div>
             </div>
         </div>
