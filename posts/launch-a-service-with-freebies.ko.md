@@ -12,7 +12,7 @@
 시중에 생각외로 무료 서비스들이 많이 나와있다. 그걸 조합하면 큰 서비스가 하나 튀어나오지 않을까?
 ### 무료인 서비스들을 쭉 나열해보자
 
-- Amazon Web Services (PaaS)
+- [Amazon Web Services](https://aws.amazon.com/ko/free/) (PaaS)
 	- 1yr for freetier:
 		- EC2(Computing) t2.micro
 		- EBS(Computing Storage) 30GiB
@@ -40,13 +40,13 @@
 		- CodePipeline (?) 월별 1개
 	- CloudFormation 를 통해 json형식으로 관리할 수 있음.
 
-- Azure (PaaS)
+- [Azure](https://azure.microsoft.com/ko-kr/pricing/free-trial/) (PaaS)
 	- $200 30days
 
-- Google Cloud Platform (PaaS)
+- [Google Cloud Platform](https://cloud.google.com/free-trial/) (PaaS)
 	- $300 60days
 
-- Github (Source Repositories)
+- [Github](https://github.com) (Source Repositories)
 	- Max 1GiB per Repository (아마 --depth 1을 기준으로 하지 않을까?)
 	- Organizations
 	- Pages
@@ -56,44 +56,73 @@
 		 - 무제한 트래픽
 		 - 404 페이지 트윅 가능
 		 
-- Gitlab (Source Repositories)
+- [Gitlab](https://about.gitlab.com/gitlab-com) (Source Repositories)
 	- Max 10GiB per Project(?)
 	
-- CloudFlare (CDN)
-	- .
+- [CloudFlare](https://cloudflare.com/plans) (CDN)
+	- DDoS 방어와 CDN
+	- SSL 적용에 하루의 시간이 걸린다고 알고 있음, 대부분의 브라우저에 됨
+	- Weekly 크롤링한 정보를 기반으로 서버가 죽어도 돌아갈 수 있도록 해줌
+	- Max 100MiB (컨텐츠 총량을 말하는건가)
+	- 엣지 지역을 못 정한다고 알고있음 (런던이라던지..)
 
-- Parse (BaaS)
-	- .
+- [Parse](https://parse.com/plans) (BaaS)
+	- 초당 30리퀘스트
+	- 1개의 백그라운드 작업 (매달? 동시에?)
+	- 20GiB 파일 저장소
+	- 20GiB DB
+	- 매달 2TiB 파일 전송
+	- 매달 1백개의 푸시
 
-- Travis CI (Continuous Integration)
-	- .
+- [Travis CI](https://travis-ci.com/plans) (Continuous Integration)
+	- 오픈소스의 경우, Fair하게 실행한다고. (그러니까 Pool이 있고, 어느정도는 이용할 수 있음)
 
-- Mongolab (MongoDB)
-	- .
+- [Mongolab](https://mongolab.com/plans) (MongoDB)
+	- 500MiB Single DB, 지역이 아마 미국이나 유럽이었던 기억이.
 
-- Google Analytics (User Analytics)
-	- .
+- [Google Analytics](https://google.com/analytics) (User Analytics)
+	- 사용자의 행동 분석
 
-- Disqus (Web Commenting)
-	- .
+- [Disqus](https://disqus.com) (Web Commenting)
+	- 무료임
+	- [API](https://disqus.com/api/docs/) 지원 함 ([Quota 는 한시간에 1000개](https://help.disqus.com/customer/portal/articles/1104798))
+	- [UI를 CSS로 조금 수정 가능](https://help.disqus.com/customer/portal/articles/545277)
+	- [큰 사이트들은 Export XML이 안된다고 함](https://help.disqus.com/customer/en/portal/articles/1104797-importing-exporting)
 
-- Asana (Issue Tracker)
-- Trello (Issue Tracker)
-- Google Drive (Documents Storage)
-	- .
+- [Asana](https://asana.com/pricing) (Issue Tracker)
+- [Trello](https://trello.com/pricing) (Issue Tracker)
+- [Google Drive](https://support.google.com/drive/answer/2375123?hl=ko) (Documents Storage)
+	- 15GiB 무료
 
-- Landscape.io (Python Code Quality Coverage)
-	- .
+- [Landscape.io](https://landscape.io) (Python Code Quality Coverage)
+	- 오픈소스일경우 무료
 
-- Newrelic (Server Application Diagnotics)
+- [Newrelic](https://newrelic.com/application-monitoring/pricing) (Server Monitoring)
+	- 뭐든지 24시간의 기록만 저장
 
-- Sealion (Server OS Diagnotics)
+- [Sealion](https://sealion.com/) (Server OS Monitoring)
 	- 2 computers
+	- 특정 시점마다의 cui를 통한 결과를 알려줌
+		- Trigger로 쓰기 좋음
 
-- HTTPSEverywhere (Free SSL Certificate)
+- [Let's Encrypt](https://letsencrypt.org) (Free SSL Certificate)
+	- 한달뒤부터 지원할 듯
+	- 분명 지원안하는 구형 브라우저가 있을 듯
 
-- 마지막으론, 당연히 Slack (Chat)
+- 마지막으론, 당연히 [Slack](https://slack.com/pricing) (Chat)
+	- 대화기록 만개 검색가능
+	- 10개의 Service Integration 지원 (중요하니 영어로)
+
+- 가 아니라 [Heroku](https://heroku.com/pricing)가 있다. 왜 이건 매번 내 눈에 안들어오는걸까.
+	- 512 MiB Ram, 1 web / 1 worker
+	- 30분 작동없으면 죽음ㅋㅋㅋㅋ
+	- 하루에 6시간은 죽어있어야함
+
 
 ### Freebie만 모여있는 사이트들도 많네
 - https://groth.supply/free
 - https://www.producthunt.com/@hnshah/collections/free-stuff-for-startups
+
+### 그러니까 나는
+AWS에서 필요한 거는 CloudFormation을 통해 JSON으로 묶어서 이를 Github에 올려서 잘 관리하면 되려나, 그리고 1년마다 바꿔주고 (되게 나쁜생각)
+
