@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html prefix="
+og: http://ogp.me/ns#
+article: http://ogp.me/ns/article#
+" lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>무료 서비스들로 서비스 하나를 런치할 수 있지 않을까? | minhoryang.github.io</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link rel="canonical" href="https://minhoryang.github.io/ko/posts/launch-a-service-with-freebies/">
+<!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="양민호">
+<meta property="og:site_name" content="minhoryang.github.io">
+<meta property="og:title" content="무료 서비스들로 서비스 하나를 런치할 수 있지 않을까?">
+<meta property="og:url" content="https://minhoryang.github.io/ko/posts/launch-a-service-with-freebies/">
+<meta property="og:description" content="시중에 생각외로 무료 서비스들이 많이 나와있다. 그걸 조합하면 큰 서비스가 하나 튀어나오지 않을까?
+
+무료인 서비스들을 쭉 나열해보자
+
+
+Amazon Web Services (PaaS)
+
+
+1yr for freetier:
+
+
+EC2(Computing) t2.micro
+EBS(Computing Storage) 30GiB
+S3(Object Storage) 5G">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2015-10-22T00:29:41+09:00">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-68873489-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+    <section class="social"><ul>
+<li><a href="../../" title="Korean"><i class="icon-home"></i></a></li>
+            <li><a href="../../../en/" title="English"><i class="icon-globe"></i></a></li>
+            <li><a href="../../archive.html" title="저장소"><i class="icon-folder-open-alt"></i></a></li>
+            <li><a href="../../categories/" title="태그"><i class="icon-tags"></i></a></li>
+            <li><a href="https://github.com/minhoryang/minhoryang.github.io/" title="Ask Me Anything"><i class="icon-question-sign"></i></a></li>
+            <li><a href="https://facebook.com/minhoryang" title="Facebook"><i class="icon-facebook-sign"></i></a></li>
+            <li><a href="https://github.com/minhoryang" title="Github"><i class="icon-github"></i></a></li>
+
+        </ul></section><section class="page-content"><div class="content" rel="main">
+    <div class="post">
+        <h1 class="p-name entry-title" itemprop="headline name">무료 서비스들로 서비스 하나를 런치할 수 있지 않을까?</h1>
+
+        <div class="meta">
+            <div class="authordate">
+                <time class="timeago" datetime="2015-10-22T00:29:41+09:00">2015-10-22 00:29</time>
+</div>
+            
+        </div>
+        <div class="body">
+            <div>
+<p>시중에 생각외로 무료 서비스들이 많이 나와있다. 그걸 조합하면 큰 서비스가 하나 튀어나오지 않을까?</p>
+
+<h4>무료인 서비스들을 쭉 나열해보자</h4>
+
+<ul>
+<li>
+<p>Amazon Web Services (PaaS)</p>
+
+<ul>
+<li>1yr for freetier:
+
+<ul>
+<li>EC2(Computing) t2.micro</li>
+<li>EBS(Computing Storage) 30GiB</li>
+<li>S3(Object Storage) 5GiB (Get 2만건, Put 2천건)</li>
+<li>RDS(DB) t2.micro 20GiB + 백업용 20GiB</li>
+<li>CloudFront(CDN) 50GB, HTTP/S 요청 2백만건 (매월이 아닌 듯)</li>
+<li>ELB(Load Balancer) 매월 15GiB 처리</li>
+<li>ElasticCache t2.micro</li>
+<li>ElasticSearch t2.micro + 10GiB EBS</li>
+<li>API Gateway 매월 1백만 건</li>
+<li>IoT 매월 250,000건
+
+<ul>
+<li>설마 이걸 JS에서 쓸 일이 있을까?ㄷㄷ 싶지만 JS가되니 넣어놓음.</li>
+</ul>
+</li>
+<li>매월 15GiB 데이터 전송
+
+<ul>
+<li>이게 어떤식으로 책정되는지가 관건일 듯.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>freetier coverage:
+
+<ul>
+<li>DynamoDB 25GiB, Read/Write 25 units (단위주의)</li>
+<li>Congnito (BaaS 인듯) 무제한 사용자처리,  클라우드 10GiB, 동기화(?) 월별 1백만번
+
+<ul>
+<li>얘도 Javascript됨ㅋㅋㅋㅋ</li>
+</ul>
+</li>
+<li>CloudWatch (Log Alarm)</li>
+<li>SES (Email) 월별 6.2만건 수신, 1천건 송신
+
+<ul>
+<li>송신도 자동화하게?ㄷㄷ</li>
+</ul>
+</li>
+<li>SWF (Workflow) 워크플로우실행 1천건, ... (알아봐야함)</li>
+<li>SQS/SNS (Queue/Push) 1백만건</li>
+<li>Lambda (Func) 월별 1백만건</li>
+<li>CodePipeline (?) 월별 1개</li>
+</ul>
+</li>
+<li>CloudFormation 를 통해 json형식으로 관리할 수 있음.</li>
+</ul>
+</li>
+<li>
+<p>Azure (PaaS)</p>
+
+<ul>
+<li>$200 30days</li>
+</ul>
+</li>
+<li>
+<p>Google Cloud Platform (PaaS)</p>
+
+<ul>
+<li>$300 60days</li>
+</ul>
+</li>
+<li>
+<p>Github (Source Repositories)</p>
+
+<ul>
+<li>Max 1GiB per Repository (아마 --depth 1을 기준으로 하지 않을까?)</li>
+<li>Organizations</li>
+<li>Pages
+
+<ul>
+<li>username.github.io 도메인 제공
+
+<ul>
+<li>다른 CNAME 지정 가능</li>
+</ul>
+</li>
+<li>https (wildcard) 인증서</li>
+<li>무제한 트래픽</li>
+<li>404 페이지 트윅 가능</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Gitlab (Source Repositories)</p>
+
+<ul>
+<li>Max 10GiB per Project(?)</li>
+</ul>
+</li>
+<li>
+<p>CloudFlare (CDN)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li>
+<p>Parse (BaaS)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li>
+<p>Travis CI (Continuous Integration)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li>
+<p>Mongolab (MongoDB)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li>
+<p>Google Analytics (User Analytics)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li>
+<p>Disqus (Web Commenting)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li><p>Asana (Issue Tracker)</p></li>
+<li><p>Trello (Issue Tracker)</p></li>
+<li>
+<p>Google Drive (Documents Storage)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li>
+<p>Landscape.io (Python Code Quality Coverage)</p>
+
+<ul>
+<li>.</li>
+</ul>
+</li>
+<li><p>Newrelic (Server Application Diagnotics)</p></li>
+<li>
+<p>Sealion (Server OS Diagnotics)</p>
+
+<ul>
+<li>2 computers</li>
+</ul>
+</li>
+<li><p>HTTPSEverywhere (Free SSL Certificate)</p></li>
+<li><p>마지막으론, 당연히 Slack (Chat)</p></li>
+</ul>
+<h4>Freebie만 모여있는 사이트들도 많네</h4>
+
+<ul>
+<li><a href="https://groth.supply/free">https://groth.supply/free</a></li>
+<li><a href="https://www.producthunt.com/@hnshah/collections/free-stuff-for-startups">https://www.producthunt.com/@hnshah/collections/free-stuff-for-startups</a></li>
+</ul>
+</div>
+        </div>
+                <ul class="pager hidden-print">
+<li class="previous">
+                <a href="../cloudampq-rabbitmq-aas-i_heard_it/" rel="prev" title="CloudAMPQ, RabbitMQ-aaS! - #I_HEARD_IT">이전 포스트</a>
+            </li>
+        </ul>
+</div>
+                    <footer id="footer"><p>Contents © 2015         <a href="mailto:minho.ryang+github@gmail.com">양민호</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </section><script src="../../../assets/js/all-nocdn.js" type="text/javascript"></script><script type="text/javascript">
+            $(function(){
+                $('.timeago').timeago();
+            });
+        </script>
+</body>
+</html>
