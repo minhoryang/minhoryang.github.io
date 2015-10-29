@@ -33,6 +33,79 @@ article: http://ogp.me/ns/article#
 
         </ul></section><section class="page-content"><div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/">Wanted to add logs and editted-timestamps for all posts</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-10-29T19:27:43+09:00">2015-10-29 19:27</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                
+            </div>
+            <div class="body">
+                <span></span>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/travis_ci_will_build_minhoryanggithubio/"> Travis CI will build minhoryang.github.io</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-10-29T00:00:00+09:00">2015-10-29 00:00</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                
+            </div>
+            <div class="body">
+                <div>
+<h3>Current Status</h3>
+
+<p>minhoryang.github.io have 3 branches: <strong>master</strong>, <strong>source</strong>, <strong>ama</strong></p>
+
+<ul>
+<li>
+<strong>master</strong> branch has <strong>*.html</strong> files for exposing by Github Pages</li>
+<li>
+<strong>source</strong> branch has <strong>*.md</strong> manuscripts and <a href="posts/travis_ci_will_build_minhoryanggithubio/">Nikola</a>'s <strong>conf.py</strong>
+</li>
+<li>ignores <strong>ama</strong> branch, it just has README.md only</li>
+</ul>
+<p>With <code>nikola build</code> and <code>nikola deploy</code>, output/* at the source branch pushes to master branch.</p>
+
+<p>Dependencies are well preserved at requirements.txt.
+External dependencies are included on <strong>source</strong> branch's <code>plugins/</code> and <code>themes/</code> directory.</p>
+
+<h3>I want</h3>
+
+<ul>
+<li>to update my blogs at Github web page</li>
+<li>even with iPhone</li>
+</ul>
+<h3>Let's resolve it.</h3>
+
+<h4>Conditionally Selecting the build-wanted commits by commit msg</h4>
+
+<p>At the client side: iPhone Github client may not support pre-post hook.</p>
+
+<p>At the server side: post-receive hook will deny the commit which not fit the commit message rules, but Github doesn't supported it but supported the web hook.
+but web hook can't reject the commit.</p>
+
+<p><a href="http://docs.travis-ci.com/user/customizing-the-build/#Skipping-a-build">Travis CI can skip the build.</a>
+but by [ci skip] will be located with every my normal environment pushes.</p>
+
+<p>From now on, I need to write <code>[ci skip]</code> at every commits when I pushed with usual workspaces.</p>
+
+<p>(Really?! <code># TODO : What a useless byte!</code>)</p>
+
+<p>I really want to bypass it. but Travis ci will triggering only by push/pull requests.</p>
+
+<p>(TO BE CONTINUE)</p>
+</div>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/launch-a-service-with-freebies/">무료 서비스들로 서비스 하나를 런치할 수 있지 않을까?</a></h1>
             <div class="meta">
                 <div class="authordate">

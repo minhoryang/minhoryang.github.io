@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/archive.html</loc>
-  <lastmod>2015-10-21T16:47:00Z</lastmod>
+  <lastmod>2015-10-29T10:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/</loc>
@@ -148,6 +148,16 @@
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/todo/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/en/posts/travis_ci_will_build_minhoryanggithubio/</loc>
+  <lastmod>2015-10-29T10:27:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/travis_ci_will_build_minhoryanggithubio/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/en/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/</loc>
+  <lastmod>2015-10-29T10:27:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/ko/</loc>
   <lastmod>2015-10-21T16:47:00Z</lastmod>
  </url>
@@ -157,7 +167,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/archive.html</loc>
-  <lastmod>2015-10-21T16:47:00Z</lastmod>
+  <lastmod>2015-10-29T10:27:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/</loc>
@@ -294,5 +304,15 @@
   <loc>https://minhoryang.github.io/ko/posts/todo/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/todo/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/posts/travis_ci_will_build_minhoryanggithubio/</loc>
+  <lastmod>2015-10-29T10:27:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/travis_ci_will_build_minhoryanggithubio/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/</loc>
+  <lastmod>2015-10-29T10:32:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/" />
  </url>
 </urlset>
