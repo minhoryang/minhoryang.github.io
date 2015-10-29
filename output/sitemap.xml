@@ -7,23 +7,23 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://minhoryang.github.io/</loc>
-  <lastmod>2015-10-21T16:47:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/</loc>
-  <lastmod>2015-10-21T16:47:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/2015/</loc>
-  <lastmod>2015-10-19T11:51:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/archive.html</loc>
-  <lastmod>2015-10-29T10:27:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/</loc>
-  <lastmod>2015-10-19T11:53:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/brew-cask/</loc>
@@ -38,6 +38,10 @@
   <lastmod>2015-10-19T11:51:00Z</lastmod>
  </url>
  <url>
+  <loc>https://minhoryang.github.io/en/categories/cat_designdoc/</loc>
+  <lastmod>2015-10-29T23:46:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/en/categories/cat_i_heard_it/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
  </url>
@@ -48,6 +52,10 @@
  <url>
   <loc>https://minhoryang.github.io/en/categories/cat_tip/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/en/categories/designdoc/</loc>
+  <lastmod>2015-10-29T23:46:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/docker/</loc>
@@ -123,13 +131,18 @@
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/annyeonghaseyo/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/en/posts/api/</loc>
+  <lastmod>2015-10-29T23:40:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/api/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/en/posts/apple-app-store-review-guidelines-i_read_it/</loc>
   <lastmod>2015-10-19T12:00:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/apple-app-store-review-guidelines-i_read_it/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/cloudampq-rabbitmq-aas-i_heard_it/</loc>
-  <lastmod>2015-10-19T12:00:00Z</lastmod>
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/cloudampq-rabbitmq-aas-i_heard_it/" />
  </url>
  <url>
@@ -139,39 +152,43 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/gardeninggrooming-os-x-for-developer/</loc>
-  <lastmod>2015-10-19T11:51:00Z</lastmod>
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/gardeninggrooming-os-x-for-developer/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/todo/</loc>
-  <lastmod>2015-10-19T11:51:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/todo/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/en/posts/travis-ci-will-build-minhoryang-github-io/</loc>
+  <lastmod>2015-10-29T23:42:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/travis-ci-will-build-minhoryang-github-io/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/en/posts/travis_ci_will_build_minhoryanggithubio/</loc>
-  <lastmod>2015-10-29T10:27:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/travis_ci_will_build_minhoryanggithubio/" />
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/</loc>
-  <lastmod>2015-10-29T10:27:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/</loc>
-  <lastmod>2015-10-21T16:47:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/2015/</loc>
-  <lastmod>2015-10-21T16:47:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/archive.html</loc>
-  <lastmod>2015-10-29T10:27:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/</loc>
-  <lastmod>2015-10-19T11:53:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/brew-cask/</loc>
@@ -186,6 +203,10 @@
   <lastmod>2015-10-19T11:51:00Z</lastmod>
  </url>
  <url>
+  <loc>https://minhoryang.github.io/ko/categories/cat_designdoc/</loc>
+  <lastmod>2015-10-29T23:46:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/ko/categories/cat_i_heard_it/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
  </url>
@@ -196,6 +217,10 @@
  <url>
   <loc>https://minhoryang.github.io/ko/categories/cat_tip/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/categories/designdoc/</loc>
+  <lastmod>2015-10-29T23:46:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/docker/</loc>
@@ -266,9 +291,18 @@
   <lastmod>2015-10-19T11:51:00Z</lastmod>
  </url>
  <url>
+  <loc>https://minhoryang.github.io/ko/index-1.html</loc>
+  <lastmod>2015-10-29T23:49:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/ko/posts/annyeonghaseyo/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/annyeonghaseyo/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/posts/api/</loc>
+  <lastmod>2015-10-29T23:40:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/api/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/apple-app-store-review-guidelines-i_read_it/</loc>
@@ -282,17 +316,17 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/future-of-microservices-paradigm/</loc>
-  <lastmod>2015-10-19T11:51:00Z</lastmod>
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/future-of-microservices-paradigm/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/gardeninggrooming-os-x-for-developer/</loc>
-  <lastmod>2015-10-19T11:51:00Z</lastmod>
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/gardeninggrooming-os-x-for-developer/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/launch-a-service-with-freebies/</loc>
-  <lastmod>2015-10-21T16:48:00Z</lastmod>
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/launch-a-service-with-freebies/" />
  </url>
  <url>
@@ -302,17 +336,21 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/todo/</loc>
-  <lastmod>2015-10-19T11:51:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/todo/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/ko/posts/travis-ci-will-build-minhoryang-github-io/</loc>
+  <lastmod>2015-10-29T23:42:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/travis-ci-will-build-minhoryang-github-io/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/ko/posts/travis_ci_will_build_minhoryanggithubio/</loc>
-  <lastmod>2015-10-29T10:27:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/travis_ci_will_build_minhoryanggithubio/" />
+  <lastmod>2015-10-29T23:43:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/</loc>
-  <lastmod>2015-10-29T10:32:00Z</lastmod>
+  <lastmod>2015-10-29T23:47:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/wanted-to-add-logs-and-editted-timestamps-for-all-posts/" />
  </url>
 </urlset>
