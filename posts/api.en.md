@@ -56,3 +56,15 @@
 - VPN
 
 # WORK IN PROGRESS...
+## 20151103 Added
+- COOKIECUTTER Available
+- Source code with Metadata
+	- Semantic Versioning (If modified, new version get)
+	- Dependency List / Check
+	- Exposed Feature Flags
+		- Additional Dependency
+		- Conditional Feature Flags
+	- Proto Func Injection
+- http://blog.launchdarkly.com/feature-flag-driven-development/
+- http://zcentric.com/2015/10/26/kubernetes-deployment-pipeline/
+- https://github.com/eBay/fabio
