@@ -33,6 +33,84 @@ article: http://ogp.me/ns/article#
 
         </ul></section><section class="page-content"><div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/popo/">POPO</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-11-08T23:38:00+09:00">2015-11-08 23:38</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                
+            </div>
+            <div class="body">
+                <div>
+<h2><a href="https://github.com/minhoryang/popo">POPO</a></h2>
+
+<p>Define everything using POPOs (Plain Old Python Object), then you can easily use it from SQLAlchemy ORM, Protobuf3, and so on.</p>
+
+<h3>Wanted Types</h3>
+
+<ul>
+<li>Numeric thingy</li>
+<li>String</li>
+<li>List
+
+<ul>
+<li>Huh? How to define the contents of list?
+
+<ul>
+<li>Let's Use <a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 - Type Hints</a>
+
+<ul>
+<li>Isn't it Plain-New-Python-Object? ...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime.now">DateTime</a></li>
+<li>Bytes</li>
+</ul>
+<h3>Wanted Exports</h3>
+
+<ul>
+<li><a href="http://www.sqlalchemy.org/">SQLAlchemy ORM</a></li>
+<li><a href="https://developers.google.com/protocol-buffers/docs/proto3#scalar">Protobuf</a></li>
+</ul>
+<h3>Wanted Features</h3>
+
+<ul>
+<li>Versioning
+
+<ul>
+<li>SQLAlchemy will cover this by alembic</li>
+<li>Protobuf need to consider this
+
+<ul>
+<li>read olders and managing the </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Exports Factory and Configurable Exports?
+
+<ul>
+<li>want to export with
+
+<ul>
+<li><a href="https://github.com/kvesteri/sqlalchemy-utils">sqlalchemy-utils</a></li>
+<li><a href="https://github.com/Pr0Ger/protobuf3">protobuf3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/api/">API</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -1066,36 +1144,6 @@ pushbullet</p>
 <li>ADD MORE!</li>
 </ul>
 </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/future-of-microservices-paradigm/">Future of Microservices Paradigm</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2015-10-13T22:04:11+09:00">2015-10-13 22:04</time>
-</div>
-                <div class="stats">
-                    
-                </div>
-                
-            </div>
-            <div class="body">
-                <div>
-<p>Microservices 패러다임이 꽤나 화제였었고, 우리도 작성하는 서버의 기본구조를 비슷하게 가져갔다.
-"소스코드는 한줄기로 관리하나, 각각의 모듈을 분리해서 사용할 수 있도록"
-그러나 Calling Hierarchy에 따른 Dependency Injection문제나 DBaaS가 필요해 지는 등 여러가지 생각이 필요해지기에 이리저리 궁리를 하다, 우리와 비슷한 생각을 하는 아티클을 찾아 여기 공유한다. 나중에라도 잘 정리할 수 있었으면 좋겠다.</p>
-<p>우선 우리는 기존의 환경(flask/sqlalchemy/celery/rabbitmq/postgresql/...)에 gRPC+docker+kubernetes+consul 등을 쓸 생각을 하고 있다. 물론 사심이 절반 이상이기에 경계하고있다.
-(+ CiscoCloud의 MANTL이 나랑 비슷한 생각을 가지고 있어 계속 지켜보고있는 중이다)</p>
-<ol class="arabic simple">
-<li><a class="reference external" href="http://highscalability.com/blog/2015/10/12/making-the-case-for-building-scalable-stateful-services-in-t.html">http://highscalability.com/blog/2015/10/12/making-the-case-for-building-scalable-stateful-services-in-t.html</a></li>
-<li><a class="reference external" href="http://www.stavros.io/posts/microservices-cargo-cult/">http://www.stavros.io/posts/microservices-cargo-cult/</a></li>
-<li><a class="reference external" href="http://philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html">http://philcalcado.com/2015/09/08/how_we_ended_up_with_microservices.html</a></li>
-<li><a class="reference external" href="http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/">http://dev.otto.de/2015/09/30/on-monoliths-and-microservices/</a></li>
-<li><a class="reference external" href="https://integrate2015.sched.org/event/385d40883b82c032d15c8b705b1d420c">https://integrate2015.sched.org/event/385d40883b82c032d15c8b705b1d420c</a></li>
-<li><a class="reference external" href="https://inconshreveable.com/10-07-2015/the-neomonolith/">https://inconshreveable.com/10-07-2015/the-neomonolith/</a></li>
-<li><a class="reference external" href="https://github.com/CiscoCloud/microservices-infrastructure">https://github.com/CiscoCloud/microservices-infrastructure</a></li>
-</ol>
-</div>
-            </div>
         </div>
             <nav class="postindexpager"><ul class="pager">
 <li class="next">

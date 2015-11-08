@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/archive.html</loc>
-  <lastmod>2015-10-29T23:47:00Z</lastmod>
+  <lastmod>2015-11-08T14:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/</loc>
@@ -156,6 +156,11 @@
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/gardeninggrooming-os-x-for-developer/" />
  </url>
  <url>
+  <loc>https://minhoryang.github.io/en/posts/popo/</loc>
+  <lastmod>2015-11-08T14:38:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/popo/" />
+ </url>
+ <url>
   <loc>https://minhoryang.github.io/en/posts/todo/</loc>
   <lastmod>2015-10-29T23:47:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/todo/" />
@@ -184,7 +189,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/archive.html</loc>
-  <lastmod>2015-10-29T23:47:00Z</lastmod>
+  <lastmod>2015-11-08T14:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/</loc>
@@ -292,7 +297,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/index-1.html</loc>
-  <lastmod>2015-11-03T14:57:00Z</lastmod>
+  <lastmod>2015-11-08T14:38:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/annyeonghaseyo/</loc>
@@ -333,6 +338,11 @@
   <loc>https://minhoryang.github.io/ko/posts/oh-my-build/</loc>
   <lastmod>2015-10-19T11:51:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/oh-my-build/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/posts/popo/</loc>
+  <lastmod>2015-11-08T14:38:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/popo/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/todo/</loc>
