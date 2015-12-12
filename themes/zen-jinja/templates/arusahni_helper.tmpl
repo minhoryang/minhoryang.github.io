@@ -160,8 +160,6 @@ lang="{{ lang }}">
 {% endmacro %}
 
 {% macro html_sourcelink() %}
-    {% if show_sourcelink %}
         &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="{{ post.source_link() }}" id="sourcelink">{{ messages("Source") }}</a>
-    {% endif %}
+        <a href="https://github.com/minhoryang/minhoryang.github.io/blame/source/{{ post.source_path }}" id="sourcelink">{{ messages("Source") }}</a>
 {% endmacro %}

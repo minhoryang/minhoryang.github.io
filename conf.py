@@ -242,7 +242,7 @@ PRETTY_URLS = True
 
 MARKDOWN_EXTENSIONS = ['fenced_code', 'codehilite', 'extra']
 
-SHOW_SOURCELINK = False
+SHOW_SOURCELINK = True
 COPY_SOURCES = False
 
 # INDEX_DISPLAY_POST_COUNT = 10
