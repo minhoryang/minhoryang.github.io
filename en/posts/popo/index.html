@@ -6,28 +6,37 @@ article: http://ogp.me/ns/article#
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>POPO | minhoryang.github.io</title>
+<title> POPO | minhoryang.github.io</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
 <link rel="canonical" href="https://minhoryang.github.io/en/posts/popo/">
 <!--[if lt IE 9]><script src="/assets/js/html5.js"></script><![endif]--><meta name="author" content="Min-Ho Ryang">
 <meta property="og:site_name" content="minhoryang.github.io">
-<meta property="og:title" content="POPO">
+<meta property="og:title" content=" POPO">
 <meta property="og:url" content="https://minhoryang.github.io/en/posts/popo/">
-<meta property="og:description" content="POPO
-
-Define everything using POPOs (Plain Old Python Object), then you can easily use it from SQLAlchemy ORM, Protobuf3, and so on.
-
-Wanted Types
+<meta property="og:description" content="Wanted Goals
 
 
-Numeric thingy
-String
-List
+Python 3
+$ popo input.py
 
 
-Huh? How to define the">
+-&gt; input.sqla.py
+-&gt; input.proto
+
+POPO input files just work as normal python file
+Pipeline:
+
+
+Read Input
+Convert to Own DataTypes
+Target Factories
+Outputs
+
+
+
+">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2015-11-08T23:38:00+09:00">
+<meta property="article:published_time" content="2015-12-12T00:00:00+09:00">
 <link rel="alternate" hreflang="ko" href="../../../ko/posts/popo/">
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -52,11 +61,11 @@ Huh? How to define the">
 
         </ul></section><section class="page-content"><div class="content" rel="main">
     <div class="post">
-        <h1 class="p-name entry-title" itemprop="headline name">POPO</h1>
+        <h1 class="p-name entry-title" itemprop="headline name"> POPO</h1>
 
         <div class="meta">
             <div class="authordate">
-                <time class="timeago" datetime="2015-11-08T23:38:00+09:00">2015-11-08 23:38</time><a href="../../../ko/posts/popo/" rel="alternate" hreflang="ko">
+                <time class="timeago" datetime="2015-12-12T00:00:00+09:00">2015-12-12 00:00</time><a href="../../../ko/posts/popo/" rel="alternate" hreflang="ko">
                 영어</a>
 
             
@@ -65,39 +74,51 @@ Huh? How to define the">
         </div>
         <div class="body">
             <div>
-<h2><a href="https://github.com/minhoryang/popo">POPO</a></h2>
+<h3>Wanted Goals</h3>
 
-<p>Define everything using POPOs (Plain Old Python Object), then you can easily use it from SQLAlchemy ORM, Protobuf3, and so on.</p>
+<ul>
+<li>Python 3</li>
+<li>$ popo input.py
 
+<ul>
+<li>-&gt; input.sqla.py</li>
+<li>-&gt; input.proto</li>
+</ul>
+</li>
+<li>POPO input files just work as normal python file</li>
+<li>Pipeline:
+
+<ul>
+<li>Read Input</li>
+<li>Convert to Own DataTypes</li>
+<li>Target Factories</li>
+<li>Outputs</li>
+</ul>
+</li>
+</ul>
 <h3>Wanted Types</h3>
 
 <ul>
-<li>Numeric thingy</li>
+<li>
+<a href="https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy">Python Default Types</a>
+
+<ul>
+<li>Numeric thingy: Integer, Float, Double, ...</li>
 <li>String</li>
-<li>List
-
-<ul>
-<li>Huh? How to define the contents of list?
-
-<ul>
-<li>Let's Use <a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 - Type Hints</a>
-
-<ul>
-<li>Isn't it Plain-New-Python-Object? ...</li>
-</ul>
-</li>
-</ul>
-</li>
+<li>List</li>
+<li>Bytes</li>
 </ul>
 </li>
 <li><a href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime.now">DateTime</a></li>
-<li>Bytes</li>
+<li>Enum</li>
+<li>...</li>
 </ul>
-<h3>Wanted Exports</h3>
+<h3>Wanted Targets</h3>
 
 <ul>
 <li><a href="http://www.sqlalchemy.org/">SQLAlchemy ORM</a></li>
 <li><a href="https://developers.google.com/protocol-buffers/docs/proto3#scalar">Protobuf</a></li>
+<li>...</li>
 </ul>
 <h3>Wanted Features</h3>
 
@@ -114,7 +135,7 @@ Huh? How to define the">
 </li>
 </ul>
 </li>
-<li>Exports Factory and Configurable Exports?
+<li>Targets Factory and Configurable Targets? (custom type converter?)
 
 <ul>
 <li>want to export with
@@ -126,7 +147,161 @@ Huh? How to define the">
 </li>
 </ul>
 </li>
+<li>Prefix/Postfix naming</li>
+<li>...</li>
 </ul>
+<h3>Resolved Question</h3>
+
+<ul>
+<li>
+<a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 - Type Hints</a>?
+
+<ul>
+<li>Nope, it's not for class defining.</li>
+</ul>
+</li>
+<li>
+<a href="http://python3porting.com/fixers.html">How to get parse tree of python?</a>
+
+<ul>
+<li>ast: "designed to generate an abstract syntax tree and ignores all comments and formatting"</li>
+<li>parser: "internal code parser, which is optimized to generate byte code and too low level"</li>
+<li>lib2to3: "high level and contains all formatting, but that doesn’t mean it’s easy to use"
+
+<ul>
+<li>Why don't you just make 2to3 fixer for converting those?
+
+<ul>
+<li>I don't think 2to3 is not for it.</li>
+</ul>
+</li>
+<li>how to get the parse tree form lib2to3?
+
+<ul>
+<li>lib2to3.pgen2, but it's for python2 (maybe)
+
+<ul>
+<li>oops, our target is python3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>yo yo yo yo yo!!! We don't need to parse! We just used class.
+
+<ul>
+<li>So Class.__dict__() and instanceof() will cover all.
+
+<ul>
+<li>really? dive it now!
+
+<ul>
+<li>import <code>popo-input</code>
+
+<ul><li>
+</li></ul>
+</li>
+<li>dir(<code>popo-input</code>)
+
+<ul><li>
+</li></ul>
+</li>
+<li>.__dict__
+
+<ul><li>
+</li></ul>
+</li>
+<li>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Unresolved Questions</h3>
+
+<ul>
+<li>Is really needed? helpful?</li>
+<li>How to ...
+
+<ul>
+<li>save datetime @ protobuf?
+
+<ul>
+<li>maybe timestamp and timezone.</li>
+</ul>
+</li>
+<li>manage the build?</li>
+<li>name exported output?</li>
+<li>limit the type of contents?</li>
+<li>limit the size of string with this?
+
+<ul>
+<li>using comment? (noooooooooo..)</li>
+<li>using </li>
+</ul>
+</li>
+<li>manage the metadata of input/output source code?
+
+<ul>
+<li>why need it?
+
+<ul>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Where is the gap for adding versioning process.</li>
+<li>No Private / Forgien Key?!</li>
+<li>Nested Class!</li>
+<li>Alphabetical Order Class Contents?!!!</li>
+<li>How to save the order of input, and keep it as output?!!!!!!!!!! &lt;- currently biggest mission blocker (lib2to3 needed?)</li>
+</ul>
+<h3>TODO</h3>
+
+<ul>
+<li>.gitignore</li>
+</ul>
+<h3>Milestone</h3>
+
+<ol>
+<li>Set the clear blueprint for v0.0.0 (due: 151115)
+
+<ul>
+<li>minimum wanted-types: 
+
+<ul>
+<li>integer</li>
+<li>string</li>
+<li>?</li>
+</ul>
+</li>
+<li>2 targets
+
+<ul>
+<li>sqlalchemy</li>
+<li>protobuf</li>
+</ul>
+</li>
+<li>1 feature
+
+<ul>
+<li>target factory</li>
+</ul>
+</li>
+<li>Goal: directory design</li>
+<li>Goal: pipeline design</li>
+</ul>
+</li>
+<li>...</li>
+</ol>
 </div>
         </div>
                 <ul class="pager hidden-print">
