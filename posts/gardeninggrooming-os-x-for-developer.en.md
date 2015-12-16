@@ -20,9 +20,9 @@ with Recovery Partition
 **Realm Browser.app**
 **Slack.app**
 **Xcode.app**
-**OS X Server**
-Pomodoro Time
-Helium
+**OS X Server.app**
+Pomodoro Time.app
+Helium.app
 
 -----
 ## Xcode working-on-version: 7.2
@@ -32,7 +32,7 @@ Helium
 ## Keychain Assistants
 Install certificates properly (please!!)
 
-Get your default status screenshot.
+Get your default status screenshot. (rename it!!)
 
 -----
 ## Rootless
@@ -171,6 +171,7 @@ synx
 
 -----
 ### chrome extensions
+looper for youtube
 ~~google cast~~
 pushbullet
 SimpleExtManager
