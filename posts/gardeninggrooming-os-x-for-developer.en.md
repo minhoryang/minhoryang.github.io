@@ -20,9 +20,12 @@ with Recovery Partition
 **Realm Browser.app**
 **Slack.app**
 **Xcode.app**
+**OS X Server**
+Pomodoro Time
+Helium
 
 -----
-## Xcode working-on-version: 6.4
+## Xcode working-on-version: 7.2
 `xcode-select -s <path>`
 
 -----
@@ -73,6 +76,8 @@ p7zip
 pkg-config
 **[pngpaste](https://github.com/jcsalterego/pngpaste)**
 protobuf
+**pyenv**
+**pyenv-virtualenv**
 **rabbitmq**
 readline
 **[reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)**
@@ -96,16 +101,20 @@ xctool
 
 `rimraf/k` ([link](https://github.com/rimraf/k))
 
-`https://gist.github.com/2355834.git` ([git_prompt_info](https://gist.github.com/msabramo/2355834))
+~~`https://gist.github.com/2355834.git` ([git_prompt_info](https://gist.github.com/msabramo/2355834))~~ (`oh-my-zsh` will cover)
 
 `https://gist.github.com/342b10d7609679d8c566.git miloshadzic-minhoryang`  ([theme](https://gist.github.com/minhoryang/342b10d7609679d8c566))
 
 -----
 ### vim: ~~[vundle](https://github.com/VundleVim/Vundle.vim)~~ [vim-plug](https://github.com/junegunn/vim-plug)
 
+`syntax on`
+
 `set backspace=2`
 
 `set backspace=indent,eol,start`
+
+`command -bar -bang Q quit<bang>`
 
 -----
 ### [pyenv-installer](https://github.com/yyuu/pyenv-installer)
@@ -164,6 +173,11 @@ synx
 ### chrome extensions
 ~~google cast~~
 pushbullet
+SimpleExtManager
+
+-----
+### git-credential-osxkeychain
+Github OAuth2 Token
 
 -----
 ### spectacle.app
