@@ -38,52 +38,53 @@ and `csrutil disable`.
 
 -----
 ## [brew](http://brew.sh/)
-autoconf
 automake
 **bash**
 **bash-completion2**
 **brew-cask**
+**brew-cask-completion**
+**brew-pkg**
 **[carthage](https://github.com/Carthage/Carthage)**
-**[ccat](https://github.com/jingweno/ccat)**
+[ccat](https://github.com/jingweno/ccat)
+cmake
 **cloc**
 coreutils
+curl
 **[dark-mode](https://github.com/sindresorhus/dark-mode)**
 docbook
 docbook-xsl
 **docker**
+**docker-machine**
 findutils
-gdbm
 **git**
 **git-lfs**
 grep
 **htop-osx**
 **[ish](https://github.com/grahamc/ish)**
-jpeg
-libevent
-libidn
-lzlib
 **[mobile-shell](https://mosh.mit.edu/)**
 moreutils
-**[nload](http://www.roland-riegel.de/nload/)**
+**neovim**
+[nload](http://www.roland-riegel.de/nload/)
 **nmap**
 **openssh**
 **openssl**
-**p7zip**
-pcre
+p7zip
 **pigz**
+pkg-config
 **[pngpaste](https://github.com/jcsalterego/pngpaste)**
 protobuf
 **rabbitmq**
 readline
 **[reattach-to-user-namespace](https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard)**
 **ssh-copy-id**
+swiftlint
 **[thefuck](https://github.com/nvbn/thefuck)**
 **tmux**
 **[trash](http://hasseg.org/trash/)**
 tree
 **vim**
 **wget**
-xz
+xctool
 **[z](https://github.com/rupa/z)**
 **zsh**
 
@@ -115,9 +116,12 @@ xz
 
 -----
 ## [brew cask](http://caskroom.io/)
+aerial
+alcatraz
+battery-time-remaining
 **betterzipql**
+cakebrew
 cert-quicklook
-~~chromecast~~
 **cloud**
 **cyberduck**
 **fabric**
@@ -126,12 +130,14 @@ cert-quicklook
 **google-chrome**
 **handbrake**
 **iterm2**
-**java**
+~~java~~
 **launchrocket**
 **macs-fan-control**
 **mou**
-~~navicat-for-postgresql~~
+munki
+navicat-for-postgresql
 **ngrok**
+paw
 **pgadmin3**
 **postgres**
 **pusher**
@@ -140,8 +146,19 @@ qlcolorcode
 qlimagesize
 qlstephen
 quicklook-json
+sidestep
 **spectacle**
+tinyumbrella
 **tunnelblick**
+**vagrant**
+**vagrant-manager**
+
+----
+### gem
+fastlane
+terminal-notifier
+xcode-install
+synx
 
 -----
 ### chrome extensions
@@ -391,3 +408,12 @@ Warn! from here, weird thingy happened :)
 -----
 ## Permanently Fixed Anonymous Session
 Using fast-user-switcher, swap `/System/Library/User Template/English.lproj` with well-groomed `/Users/Guest`. [Guide](https://youtu.be/JU-W2-_c5bA)
+
+
+-----
+## OS X Server 5.0.15
+[Disable unused services carefully](https://gist.github.com/minhoryang/4c7b56324c5f2e5a8694)
+
+-----
+## Xcode with Ramdisk
+[With great power comes great responsibility](https://gist.github.com/derjohng/a828e4c40a328fe5881f)
