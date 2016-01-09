@@ -49,6 +49,28 @@ from nikola.plugin_categories import PageCompiler
 from nikola.utils import makedirs, req_missing, write_metadata
 
 
+import houdini as h
+from pygments import highlight
+from pygments.formatters import HtmlFormatter
+from pygments.lexers import get_lexer_by_name
+
+def CodeHighlighter(data, extensions):
+    class HighlighterRenderer(misaka.HtmlRenderer):
+        def blockcode(self, text, lang):
+            if not lang:
+                return '\n<pre><code>{}</code></pre>\n'.format(
+                    h.escape_html(text.strip()))
+
+            lexer = get_lexer_by_name(lang, stripall=True)
+            formatter = HtmlFormatter()
+
+            return highlight(text, lexer, formatter)
+    renderer = HighlighterRenderer()
+    md = misaka.Markdown(renderer, extensions=extensions)
+    return md(data)
+    #return misaka.html(data, extensions=extensions)
+
+
 class CompileMisaka(PageCompiler):
     """Compile Misaka into HTML."""
 
@@ -70,7 +92,7 @@ class CompileMisaka(PageCompiler):
                 data = in_file.read()
             if not is_two_file:
                 data = re.split('(\n\n|\r\n\r\n)', data, maxsplit=1)[-1]
-            output = misaka.html(data, extensions=self.ext)
+            output = CodeHighlighter(data, extensions=self.ext)
             out_file.write(output)
 
     def create_post(self, path, **kw):

@@ -2,4 +2,6 @@ nikola  # needs 'libjpeg'
 jinja2
 webassets
 misaka
-
+# houdini : https://github.com/vmg/houdini
+#           https://github.com/zacharyvoase/pyhoudini
+pygments
