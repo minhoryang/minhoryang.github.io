@@ -33,6 +33,157 @@ article: http://ogp.me/ns/article#
 
         </ul></section><section class="page-content"><div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/hello-is-there-any-python-3-code-guidelines-for-python-4/">Hello Is there any Python 3.5+ code guidelines for Python 4</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2016-01-27T00:20:53+09:00">2016-01-27 00:20</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                
+            </div>
+            <div class="body">
+                <div>
+<h3>tl;dr</h3>
+
+<ol>
+<li>Write 3 only</li>
+<li>It will be broken at 2.7</li>
+<li>then Duct-taping it</li>
+</ol>
+<h3><a href="http://astrofrog.github.io/blog/2016/01/12/stop-writing-python-4-incompatible-code/">STOP WRITING PYTHON 4 INCOMPATIBLE CODE</a></h3>
+
+<p>Just before I need to write some python project, I saw this at <a href="https://news.ycombinator.com/item?id=10888061">Hacker News</a>. It shows the reason why shouldn't use Six library. But I couldn't find guidelines for Python 4. So I started to write it.</p>
+
+<h4><a href="https://pythonhosted.org/six/">Six: Python 2 and 3 Compatibility Library</a></h4>
+
+<pre><code>Six provides simple utilities for wrapping over differences between Python 2 and Python 3. It is intended to support codebases that work on both Python 2 and 3 without modification. six consists of only one Python file, so it is painless to copy into a project.
+The name, “six”, comes from the fact that 2*3 equals 6.</code></pre>
+
+<h3>Now, we need <code>TwentyFour</code>.</h3>
+
+<h4>Really? why not <code>Twelve</code>?</h4>
+
+<p>I hope that there are some people who wanna throw Python 2 away. (me too) In my case, particular meaningful libraries block this. (such as Twisted).</p>
+
+<h4>So, check first</h4>
+
+<p>Some helpful sites for finding a reason to use Python 2.</p>
+
+<ul>
+<li><a href="https://caniusepython3.com/">https://caniusepython3.com/</a></li>
+<li><a href="https://python3wos.appspot.com/">https://python3wos.appspot.com/</a></li>
+<li><a href="http://py3readiness.org/">http://py3readiness.org/</a></li>
+</ul>
+<h5>I don't always use Python 2, but when I do, only 2.7.11+</h5>
+
+<h3>Python 4?</h3>
+
+<ul>
+<li>
+<a href="http://www.curiousefficiency.org/posts/2014/08/python-4000.html">Why Python 4.0 won't be like Python 3.0</a>
+<code>My current expectation is that Python 4.0 will merely be "the release that comes after Python 3.9". That's it.</code>
+</li>
+</ul>
+<h4>So, code for Python 3.5+ first</h4>
+
+<h4>Break it at Python 2.7.11+</h4>
+
+<h4>Fix it with</h4>
+
+<ul>
+<li>flake8</li>
+<li>py.test</li>
+<li>tox</li>
+<li>travis CI</li>
+</ul>
+<h3>Then, What differences exist between Python 3.5+ and Python 2.7.11+?</h3>
+
+<ul>
+<li>New features: <a href="https://docs.python.org/dev/whatsnew/index.html">https://docs.python.org/dev/whatsnew/index.html</a>
+
+<ul>
+<li>3.5: typing, ...</li>
+<li>3.4: asyncio, enum, ...</li>
+<li>3.3: u'unicode' (again), venv, ...</li>
+<li>3.2: concurrent.futures, PEP-3333, ...</li>
+</ul>
+</li>
+<li><a href="http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html">The key differences between Python 2.7.x and Python 3.x with examples</a></li>
+</ul>
+<h4>For 3 users, just follow those rules, then It will be okay:</h4>
+
+<ul>
+<li>Manage Python Versions with <a href="https://github.com/yyuu/pyenv">pyenv</a>
+</li>
+<li>Manage Python Project Environments with <a href="https://github.com/yyuu/pyenv-virtualenv">pyenv-virtualenv</a>
+</li>
+<li>
+<a href="http://stackoverflow.com/questions/17846908/proper-shebang-for-python-script">Shebang</a>: <code>#!/usr/bin/env python</code>
+</li>
+<li>
+<code>print()</code> as a function.</li>
+<li>
+<code>u'Everything'</code> and <code>b''</code>
+</li>
+<li>
+<code>class Base(object):</code> (object)</li>
+<li>
+<code>except Exception as e:</code> (as)</li>
+<li>
+<code>2/3.0</code> (think your C/C++ experiences)</li>
+<li>Dictionary Iteration: <a href="https://docs.python.org/dev/whatsnew/2.7.html#pep-3106-dictionary-views">Use .items(), .keys(), .values()</a>
+</li>
+<li>String Manipulation: <a href="https://docs.python.org/dev/library/stdtypes.html#str.format">Use .format()</a>
+</li>
+<li>Typing (3.5+): <a href="https://www.python.org/dev/peps/pep-0484/#suggested-syntax-for-python-2-7-and-straddling-code">Comment it</a>
+</li>
+<li>Use latest 3rd-party packages</li>
+<li>Python 2 only requirements.txt?!
+
+<ul>
+<li><a href="https://pypi.python.org/pypi/future">Future</a></li>
+<li>Enum (3.4+): <a href="https://pypi.python.org/pypi/enum34">enum34 at 2.7</a>
+</li>
+<li>what about requirements.txt?! do we divide it?</li>
+</ul>
+</li>
+</ul>
+<h4>When additional problems happened to you, check those:</h4>
+
+<ul>
+<li><a href="https://docs.python.org/dev/howto/pyporting.html">Porting Python 2 Code to Python 3</a></li>
+<li><a href="http://python-future.org/compatible_idioms.html">Cheat Sheet: Writing Python 2-3 compatible code</a></li>
+<li><a href="http://python-future.org/translation.html">Using Python 2-only dependencies on Python 3</a></li>
+<li><a href="https://pypi.python.org/pypi/nine">Nine: Python 2 / 3 compatibility, like six, but favouring Python 3</a></li>
+</ul>
+<h6>More links</h6>
+
+<ul>
+<li>
+<a href="http://blog.thezerobit.com/2014/05/25/python-3-is-killing-python.html">Python 3 is killing Python</a> and <a href="https://news.ycombinator.com/item?id=7799524">HN comments</a>
+</li>
+<li><a href="https://bitbucket.org/gutworth/six/issues/22/variable-sixpy3-is-time-bomb">Variable sixpy3 is time bomb</a></li>
+</ul>
+<h5>DISCLAIMER:</h5>
+
+<p>Maybe it's not, but I'll update those asap.
+So, please ping to me (twt@angryonhim).
+Thanks.</p>
+
+<!--
+## flake8 + importorder
+https://github.com/hpk42/pluggy/blob/master/.travis.yml
+https://github.com/hpk42/pluggy/blob/master/tox.ini
+https://github.com/spoqa/import-order/blob/master/tox.ini
+https://github.com/spoqa/sqlalchemy-enum34/blob/master/.coveragerc
+https://github.com/spoqa/geofront/blob/master/tox.ini
+-->
+</div>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/popo/"> POPO</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -953,29 +1104,6 @@ but by [ci skip] will be located with every my normal environment pushes.</p>
             </div>
             <div class="body">
                 <p>Write your post here.</p>
-            </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/oh-my-build/">하도 빌어먹어서 '빌드'냐</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2015-10-16T20:40:34+09:00">2015-10-16 20:40</time>
-</div>
-                <div class="stats">
-                    
-                </div>
-                
-            </div>
-            <div class="body">
-                <div>
-<ul>
-<li>빌드다되면 Push보내줘!!!!!!!!!!!!!!!!!!!!! 제바아아아알</li>
-<li>빌드걸면 쉽게 백그라운드로 가줘!</li>
-<li>빌드 로그를 웹에서 보여줘! 다른 큰 모니터에서좀 보게..</li>
-<li>Multicore(-j)로 빌드하면 에러난 부분을 잘 찾아서 보여줘!!!!!!!!</li>
-</ul>
-<p>이상 open-vm-tools over openwrt-x86_64 를 빌드하다가 토해낸 소감.</p>
-</div>
             </div>
         </div>
             <nav class="postindexpager"><ul class="pager">
