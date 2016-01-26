@@ -33,6 +33,490 @@ article: http://ogp.me/ns/article#
 
         </ul></section><section class="page-content"><div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/gardeninggrooming-os-x-for-developer/">Gardening/Grooming My OS X Environment</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-10-15T19:10:22+09:00">2015-10-15 19:10</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                        <div itemprop="keywords" class="tags">
+        <ul>
+        태그 : 
+           <li><a class="tag p-category" href="categories/brew/" rel="tag">brew</a></li>
+           <li><a class="tag p-category" href="categories/cask/" rel="tag">cask</a></li>
+           <li><a class="tag p-category" href="categories/docker/" rel="tag">docker</a></li>
+           <li><a class="tag p-category" href="categories/osx/" rel="tag">osx</a></li>
+           <li><a class="tag p-category" href="categories/preferences/" rel="tag">preferences</a></li>
+           <li><a class="tag p-category" href="categories/pyenv/" rel="tag">pyenv</a></li>
+           <li><a class="tag p-category" href="categories/rootless/" rel="tag">rootless</a></li>
+           <li><a class="tag p-category" href="categories/settings/" rel="tag">settings</a></li>
+           <li><a class="tag p-category" href="categories/xcode/" rel="tag">xcode</a></li>
+        </ul>
+</div>
+
+            </div>
+            <div class="body">
+                <div>
+<h3>Clean Install OS X Latest</h3>
+
+<p>with Recovery Partition</p>
+
+<hr>
+<h3>App Store</h3>
+
+<p><del>Kakaotalk.app</del>
+<strong>Microsoft Remote Desktop.app</strong>
+<del>Movist.app</del>
+<strong>Realm Browser.app</strong>
+<strong>Slack.app</strong>
+<strong>Xcode.app</strong>
+<strong>OS X Server.app</strong>
+Pomodoro Time.app
+Helium.app</p>
+
+<hr>
+<h3>Xcode working-on-version: 7.2</h3>
+
+<p><code>xcode-select -s &lt;path&gt;</code></p>
+
+<hr>
+<h3>Keychain Assistants</h3>
+
+<p>Install certificates properly (please!!)</p>
+
+<p>Get your default status screenshot. (rename it!!)</p>
+
+<hr>
+<h3>Rootless</h3>
+
+<p><a href="https://www.quora.com/How-do-I-turn-off-the-rootless-in-OS-X-El-Capitan-10-11">Read carefully, please.</a>
+and <code>csrutil disable</code>.</p>
+
+<hr>
+<h3><a href="http://brew.sh/">brew</a></h3>
+
+<p>automake
+<strong>bash</strong>
+<strong>bash-completion2</strong>
+<strong>brew-cask</strong>
+<strong>brew-cask-completion</strong>
+<strong>brew-pkg</strong>
+<strong><a href="https://github.com/Carthage/Carthage">carthage</a></strong>
+<a href="https://github.com/jingweno/ccat">ccat</a>
+cmake
+<strong>cloc</strong>
+coreutils
+curl
+<strong><a href="https://github.com/sindresorhus/dark-mode">dark-mode</a></strong>
+docbook
+docbook-xsl
+<strong>docker</strong>
+<strong>docker-machine</strong>
+findutils
+<strong>git</strong>
+<strong>git-lfs</strong>
+grep
+<strong>htop-osx</strong>
+<strong><a href="https://github.com/grahamc/ish">ish</a></strong>
+<strong><a href="https://mosh.mit.edu/">mobile-shell</a></strong>
+moreutils
+<strong>neovim</strong>
+<a href="http://www.roland-riegel.de/nload/">nload</a>
+<strong>nmap</strong>
+<strong>openssh</strong>
+<strong>openssl</strong>
+p7zip
+<strong>pigz</strong>
+pkg-config
+<strong><a href="https://github.com/jcsalterego/pngpaste">pngpaste</a></strong>
+protobuf
+<strong>pyenv</strong>
+<strong>pyenv-virtualenv</strong>
+<strong>rabbitmq</strong>
+readline
+<strong><a href="https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard">reattach-to-user-namespace</a></strong>
+<strong>ssh-copy-id</strong>
+swiftlint
+<strong><a href="https://github.com/nvbn/thefuck">thefuck</a></strong>
+<strong>tmux</strong>
+<strong><a href="http://hasseg.org/trash/">trash</a></strong>
+tree
+<strong>vim</strong>
+<strong>wget</strong>
+xctool
+<strong><a href="https://github.com/rupa/z">z</a></strong>
+<strong>zsh</strong></p>
+
+<p>(When installing, careful with various options -- See brew info first!)</p>
+
+<hr>
+<h4>zsh: <a href="https://github.com/zsh-users/antigen">antigen</a>
+</h4>
+
+<p><code>git</code></p>
+
+<p><code>rimraf/k</code> (<a href="https://github.com/rimraf/k">link</a>)</p>
+
+<p><del><code>https://gist.github.com/2355834.git</code> (<a href="https://gist.github.com/msabramo/2355834">git_prompt_info</a>)</del> (<code>oh-my-zsh</code> will cover)</p>
+
+<p><code>https://gist.github.com/342b10d7609679d8c566.git miloshadzic-minhoryang</code>  (<a href="https://gist.github.com/minhoryang/342b10d7609679d8c566">theme</a>)</p>
+
+<hr>
+<h4>vim: <del><a href="https://github.com/VundleVim/Vundle.vim">vundle</a></del> <a href="https://github.com/junegunn/vim-plug">vim-plug</a>
+</h4>
+
+<p><code>syntax on</code></p>
+
+<p><code>set backspace=2</code></p>
+
+<p><code>set backspace=indent,eol,start</code></p>
+
+<p><code>command -bar -bang Q quit&lt;bang&gt;</code></p>
+
+<hr>
+<h4><a href="https://github.com/yyuu/pyenv-installer">pyenv-installer</a></h4>
+
+<p><a href="https://github.com/yyuu/pyenv/wiki/Common-build-problems">common-build-problems will block you</a></p>
+
+<hr>
+<h4>tmux: .conf with personalized keymap</h4>
+
+<hr>
+<h3><a href="http://caskroom.io/">brew cask</a></h3>
+
+<p>aerial
+alcatraz
+battery-time-remaining
+<strong>betterzipql</strong>
+cakebrew
+cert-quicklook
+<strong>cloud</strong>
+<strong>cyberduck</strong>
+<strong>fabric</strong>
+<strong>filezilla</strong>
+<strong>flux</strong>
+<strong>google-chrome</strong>
+<strong>handbrake</strong>
+<strong>iterm2</strong>
+<del>java</del>
+<strong>launchrocket</strong>
+<strong>macs-fan-control</strong>
+<strong>mou</strong>
+munki
+navicat-for-postgresql
+<strong>ngrok</strong>
+paw
+<strong>pgadmin3</strong>
+<strong>postgres</strong>
+<strong>pusher</strong>
+<strong>pycharm</strong>
+qlcolorcode
+qlimagesize
+qlstephen
+quicklook-json
+sidestep
+<strong>spectacle</strong>
+tinyumbrella
+<strong>tunnelblick</strong>
+<strong>vagrant</strong>
+<strong>vagrant-manager</strong></p>
+
+<hr>
+<h4>gem</h4>
+
+<p>fastlane
+terminal-notifier
+xcode-install
+synx</p>
+
+<hr>
+<h4>chrome extensions</h4>
+
+<p>looper for youtube
+<del>google cast</del>
+pushbullet
+SimpleExtManager</p>
+
+<hr>
+<h4>git-credential-osxkeychain</h4>
+
+<p>Github OAuth2 Token</p>
+
+<hr>
+<h4>spectacle.app</h4>
+
+<p><code>command-shift</code>
+<code>+ arrows</code></p>
+
+<p><code>+ spacebar</code> for fullscreen</p>
+
+<p><code>+ 1 and 2</code> for swapping display</p>
+
+<p><code>+ - and =</code>(+) for smaller/larger</p>
+
+<hr>
+<h4>tunnelblick.app <code>with VPN Certs</code>
+</h4>
+
+<hr>
+<h3>downloads</h3>
+
+<p><a href="http://www.bandisoft.co.kr/bandizip/x/"><strong>Bandizip-X</strong></a></p>
+
+<hr>
+<h3>Trim Enable</h3>
+
+<p><code>sudo trimforce enable</code></p>
+
+<hr>
+<h3>System Preferences</h3>
+
+<h4>Security &amp; Privacy</h4>
+
+<p><code>filevault-enable</code></p>
+
+<p><code>firewall-block-all</code></p>
+
+<p><code>session-timeout-1m</code></p>
+
+<p><code>login-window-add-description</code></p>
+
+<p><code>location-services-only-for-find-my-mac</code></p>
+
+<p><code>disable-remote-control-infrared-receiver</code></p>
+
+<h4>Sharing</h4>
+
+<p><code>Computer-Naming and No-Sharing</code></p>
+
+<h4>Bluetooth</h4>
+
+<p><code>can't-wakeup</code></p>
+
+<h4>Trackpad</h4>
+
+<p><code>right-click</code></p>
+
+<h4>Accessibility (?!)</h4>
+
+<p><code>3-click-drag</code></p>
+
+<h4>Dock</h4>
+
+<p><code>auto-hide</code></p>
+
+<h4>Networks</h4>
+
+<p><code>google-dns</code></p>
+
+<p><code>wifi-security-wpa2-enterprise</code></p>
+
+<h4>iCloud</h4>
+
+<p><code>sync-disable</code></p>
+
+<h4>Language</h4>
+
+<p><code>keyboard-switching-keymap</code></p>
+
+<h4>Spotlight</h4>
+
+<p><code>only-for-apps</code></p>
+
+<h4>Battery</h4>
+
+<p><code>percent</code></p>
+
+<h4>Users</h4>
+
+<p><code>fast-user-switching</code></p>
+
+<p><code>guest-approved</code></p>
+
+<hr>
+<h3>Deep Configs <a href="https://github.com/mathiasbynens/dotfiles/blob/master/.osx">.osx</a>
+</h3>
+
+<p>Warn! from here, weird thingy happened :)</p>
+
+<h4>used keywords:</h4>
+
+<p><strong><code>Disable the sound effects on boot</code></strong></p>
+
+<p><strong><code>Disable transparency in the menu bar and elsewhere on Yosemite</code></strong></p>
+
+<p><strong><code>Set highlight color to green</code></strong></p>
+
+<p><code>Set sidebar icon size to medium</code></p>
+
+<p><code>Increase window resize speed for Cocoa applications</code></p>
+
+<p><code>Expand save panel by default</code></p>
+
+<p><strong><code>Save to disk (not to iCloud) by default</code></strong></p>
+
+<p><code>Automatically quit printer app once the print jobs complete</code></p>
+
+<p><code>Disable the “Are you sure you want to open this application?” dialog</code></p>
+
+<p><code>Remove duplicates in the “Open With” menu</code></p>
+
+<p><code>Display ASCII control characters using caret notation in standard text views</code></p>
+
+<p><code>Disable Resume system-wide</code></p>
+
+<p><code>Set Help Viewer windows to non-floating mode</code></p>
+
+<p><code>Restart automatically if the computer freeze</code></p>
+
+<p><strong><code>Check for software updates daily, not just once per week</code></strong></p>
+
+<p><strong><code>Disable Notification Center and remove the menu bar icon</code></strong></p>
+
+<p><code>Disable smart quotes as they’re annoying when typing code</code></p>
+
+<p><code>Disable smart dashes as they’re annoying when typing code</code></p>
+
+<p><code>Disable local Time Machine snapshots</code></p>
+
+<p><code>Disable hibernation</code></p>
+
+<p><code>Remove the sleep image file to save disk space</code></p>
+
+<p><code>Disable the sudden motion sensor as it’s not useful for SSDs</code></p>
+
+<p><strong><code>Trackpad: enable tap to click for this user and for the login screen</code></strong></p>
+
+<p><strong><code>Trackpad: map bottom right corner to right-click</code></strong></p>
+
+<p><code>Increase sound quality for Bluetooth headphones/headsets</code></p>
+
+<p><code>Enable full keyboard access for all controls</code></p>
+
+<p><code>Disable press-and-hold for keys in favor of key repeat</code></p>
+
+<p><strong><code>Set a blazingly fast keyboard repeat rate</code></strong></p>
+
+<p><code>Disable auto-correct</code></p>
+
+<p><strong><code>Stop iTunes from responding to the keyboard media keys</code></strong></p>
+
+<p><strong><code>Require password immediately after sleep or screen saver begins</code></strong></p>
+
+<p><strong><code>Save screenshots to</code></strong></p>
+
+<p><code>Save screenshots in PNG format</code></p>
+
+<p><code>Finder: allow quitting via ⌘ + Q</code></p>
+
+<p><code>Show icons for hard drives, servers, and removable media on the desktop</code></p>
+
+<p><code>Finder: show hidden files by default</code></p>
+
+<p><code>Finder: show all filename extensions</code></p>
+
+<p><code>Finder: show status bar</code></p>
+
+<p><code>Finder: show path bar</code></p>
+
+<p><code>Display full POSIX path as Finder window title</code></p>
+
+<p><code>When performing a search, search the current folder by default</code></p>
+
+<p><code>Disable the warning when changing a file extension</code></p>
+
+<p><code>Enable spring loading for directories</code></p>
+
+<p><code>Remove the spring loading delay for directories</code></p>
+
+<p><strong><code>Avoid creating .DS_Store files on network volumes</code></strong></p>
+
+<p><code>Automatically open a new Finder window when a volume is mounted</code></p>
+
+<p><code>Show item info near icons on the desktop and in other icon views</code></p>
+
+<p><code>Show item info to the right of the icons on the desktop</code></p>
+
+<p><code>Enable snap-to-grid for icons on the desktop and in other icon views</code></p>
+
+<p><code>Increase grid spacing for icons on the desktop and in other icon views</code></p>
+
+<p><code>Increase the size of icons on the desktop and in other icon views</code></p>
+
+<p><code>Use list view in all Finder windows by default</code></p>
+
+<p><code>Enable AirDrop over Ethernet and on unsupported Macs running Lion</code></p>
+
+<p><code>Show the ~/Library folder</code></p>
+
+<p><code>Expand the following File Info panes: “General”, “Open with”, and “Sharing &amp; Permissions”</code></p>
+
+<p><strong><code>Disable Dashboard</code></strong></p>
+
+<p><code>Don’t show Dashboard as a Space</code></p>
+
+<p><code>Don’t automatically rearrange Spaces based on most recent use</code></p>
+
+<p><code>Remove the auto-hiding Dock delay</code></p>
+
+<p><code>Remove the animation when hiding/showing the Dock</code></p>
+
+<p><code>Automatically hide and show the Dock</code></p>
+
+<p><code>Make Dock icons of hidden applications translucent</code></p>
+
+<p><strong><code>Disable the Launchpad gesture</code></strong></p>
+
+<p><code>Reset Launchpad, but keep the desktop wallpaper intact</code></p>
+
+<p><strong><code>Privacy: don’t send search queries to Apple</code></strong></p>
+
+<p><code>Press Tab to highlight each item on a web page</code></p>
+
+<p><code>Show the full URL in the address bar</code></p>
+
+<p><code>Allow hitting the Backspace key to go to the previous page in history</code></p>
+
+<p><code>Hide Safari’s bookmarks bar by default</code></p>
+
+<p><code>Hide Safari’s sidebar in Top Sites</code></p>
+
+<p><code>Disable Safari’s thumbnail cache for History and Top Sites</code></p>
+
+<p><strong><code>Only use UTF-8 in Terminal.app</code></strong></p>
+
+<p><code>Prevent Time Machine from prompting to use new hard drives as backup volume</code></p>
+
+<p><code>Show the main window when launching Activity Monitor</code></p>
+
+<p><code>Visualize CPU usage in the Activity Monitor Dock icon</code></p>
+
+<p><code>Show all processes in Activity Monitor</code></p>
+
+<p><code>Sort Activity Monitor results by CPU usage</code></p>
+
+<p><strong><code>Allow installing user scripts via GitHub Gist or Userscripts.org</code></strong></p>
+
+<hr>
+<h3>Permanently Fixed Anonymous Session</h3>
+
+<p>Using fast-user-switcher, swap <code>/System/Library/User Template/English.lproj</code> with well-groomed <code>/Users/Guest</code>. <a href="https://youtu.be/JU-W2-_c5bA">Guide</a></p>
+
+<hr>
+<h3>OS X Server 5.0.15</h3>
+
+<p><a href="https://gist.github.com/minhoryang/4c7b56324c5f2e5a8694">Disable unused services carefully</a></p>
+
+<hr>
+<h3>Xcode with Ramdisk</h3>
+
+<p><a href="https://gist.github.com/derjohng/a828e4c40a328fe5881f">With great power comes great responsibility</a></p>
+</div>
+            </div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/todo/">TODO</a></h1>
             <div class="meta">
                 <div class="authordate">
