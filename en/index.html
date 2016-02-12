@@ -33,254 +33,6 @@ article: http://ogp.me/ns/article#
 
         </ul></section><section class="page-content"><div class="content" rel="main">
         <div class="post">
-            <h1 class="title"><a href="posts/popo/"> POPO</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2016-02-13T00:00:00+09:00">2016-02-13 00:00</time>
-</div>
-                <div class="stats">
-                    
-                </div>
-                
-            </div>
-            <div class="body">
-                <div>
-<h2>POPO</h2>
-
-<p>Define everything using POPOs (Plain Old Python Object), then you can easily use it from SQLAlchemy ORM, Protobuf3, and so on.</p>
-
-<h3>Wanted Goals</h3>
-
-<ul>
-<li>Python 3</li>
-<li>$ popo input.py
-
-<ul>
-<li>-&gt; input.sqla.py</li>
-<li>-&gt; input.proto</li>
-</ul>
-</li>
-<li>POPO input files just work as normal python file</li>
-<li>Pipeline:
-
-<ul>
-<li>Read Input</li>
-<li>Convert to Own DataTypes</li>
-<li>Target Factories</li>
-<li>Outputs</li>
-</ul>
-</li>
-</ul>
-<h3>Wanted Types</h3>
-
-<ul>
-<li>
-<a href="https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy">Python Default Types</a>
-
-<ul>
-<li>Numeric thingy: Integer, Float, Double, ...</li>
-<li>String</li>
-<li>List</li>
-<li>Bytes</li>
-</ul>
-</li>
-<li><a href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime.now">DateTime</a></li>
-<li>Enum</li>
-<li>...</li>
-</ul>
-<h3>Wanted Targets</h3>
-
-<ul>
-<li><a href="http://www.sqlalchemy.org/">SQLAlchemy ORM</a></li>
-<li><a href="https://developers.google.com/protocol-buffers/docs/proto3#scalar">Protobuf</a></li>
-<li>...</li>
-</ul>
-<h3>Wanted Features</h3>
-
-<ul>
-<li>Versioning
-
-<ul>
-<li>SQLAlchemy will cover this by alembic</li>
-<li>Protobuf need to consider this
-
-<ul>
-<li>read olders and managing the </li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Targets Factory and Configurable Targets? (custom type converter?)
-
-<ul>
-<li>want to export with
-
-<ul>
-<li><a href="https://github.com/kvesteri/sqlalchemy-utils">sqlalchemy-utils</a></li>
-<li><a href="https://github.com/Pr0Ger/protobuf3">protobuf3</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Prefix/Postfix naming</li>
-<li>...</li>
-</ul>
-<h3>Resolved Question</h3>
-
-<ul>
-<li>
-<a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 - Type Hints</a>?
-
-<ul>
-<li>Nope, it's not for class defining.</li>
-</ul>
-</li>
-<li>
-<a href="http://python3porting.com/fixers.html">How to get parse tree of python?</a>
-
-<ul>
-<li>ast: "designed to generate an abstract syntax tree and ignores all comments and formatting"</li>
-<li>parser: "internal code parser, which is optimized to generate byte code and too low level"</li>
-<li>lib2to3: "high level and contains all formatting, but that doesn’t mean it’s easy to use"
-
-<ul>
-<li>Why don't you just make 2to3 fixer for converting those?
-
-<ul>
-<li>I don't think 2to3 is not for it.</li>
-</ul>
-</li>
-<li>how to get the parse tree form lib2to3?
-
-<ul>
-<li>lib2to3.pgen2, but it's for python2 (maybe)
-
-<ul>
-<li>oops, our target is python3</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>yo yo yo yo yo!!! We don't need to parse! We just used class.
-
-<ul>
-<li>So Class.__dict__() and instanceof() will cover all.
-
-<ul>
-<li>really? dive it now!
-
-<ul>
-<li>import <code>popo-input</code>
-
-<ul><li>
-</li></ul>
-</li>
-<li>dir(<code>popo-input</code>)
-
-<ul><li>
-</li></ul>
-</li>
-<li>.__dict__
-
-<ul><li>
-</li></ul>
-</li>
-<li>.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3>Unresolved Questions</h3>
-
-<ul>
-<li>Is really needed? helpful?</li>
-<li>How to ...
-
-<ul>
-<li>save datetime @ protobuf?
-
-<ul>
-<li>maybe timestamp and timezone.</li>
-</ul>
-</li>
-<li>manage the build?</li>
-<li>name exported output?</li>
-<li>limit the type of contents?</li>
-<li>limit the size of string with this?
-
-<ul>
-<li>using comment? (noooooooooo..)</li>
-<li>using </li>
-</ul>
-</li>
-<li>manage the metadata of input/output source code?
-
-<ul>
-<li>why need it?
-
-<ul>
-<li>...</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Where is the gap for adding versioning process.</li>
-<li>No Private / Forgien Key?!</li>
-<li>Nested Class!</li>
-<li>Alphabetical Order Class Contents?!!!</li>
-<li>How to save the order of input, and keep it as output?!!!!!!!!!! &lt;- currently biggest mission blocker (lib2to3 needed?)</li>
-</ul>
-<h3>TODO</h3>
-
-<ul>
-<li>.gitignore</li>
-</ul>
-<h3>Milestone</h3>
-
-<ol>
-<li>Set the clear blueprint for v0.0.0 (due: 151115)
-
-<ul>
-<li>minimum wanted-types: 
-
-<ul>
-<li>integer</li>
-<li>string</li>
-<li>?</li>
-</ul>
-</li>
-<li>2 targets
-
-<ul>
-<li>sqlalchemy</li>
-<li>protobuf</li>
-</ul>
-</li>
-<li>1 feature
-
-<ul>
-<li>target factory</li>
-</ul>
-</li>
-<li>Goal: directory design</li>
-<li>Goal: pipeline design</li>
-</ul>
-</li>
-<li>...</li>
-</ol>
-</div>
-            </div>
-        </div>
-        <div class="post">
             <h1 class="title"><a href="posts/domain-wasnt-covered-with-the-real-rights/">Domain wasn't covered with the real rights</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -369,8 +121,8 @@ blahblah.kr를 구매하는데 blahblah.com을 구매하는데 blahblah.jp를 �
 
 <h5>Q. 그러면 도메인의 가격은 누가 결정 하고, 어떻게 산정 되었는가?</h5>
 
-<p>그냥 마케팅 비용인거야? 물건도 아니니 렌탈이라고 보기 어렵고, 공공재라고 말하기에는 닳지도 않아.
-내가 1년을 다 못채우는데, 관리비를 다 내야하는거야? 잘못했으니까?</p>
+<p>그냥 마케팅 비용인 거야? 물건도 아니니 렌탈이라고 보기 어렵고, 공공재라고 말하기에는 닳지도 않아.
+내가 1년을 다 못 채우는데, 관리비를 다 내야 하는 거야? 잘못했으니까?</p>
 
 <h5>Q. 리다이렉팅을 다음으로하든 트위터로하든 무슨상관인가?</h5>
 
@@ -380,23 +132,27 @@ blahblah.kr를 구매하는데 blahblah.com을 구매하는데 blahblah.jp를 �
 
 <p>(이분을 비난하는게 아닌 건 아시죠?)</p>
 
-<p>co.kr을 Daum으로 연결한다고 해서 고객이나 회사가 피해를 입는다면, 아니면 수익에 손해를 끼쳤다는게 확인되면 (잠재고객이탈?) 그때 그 건에 대한 소송을 걸어야지.</p>
+<p>co.kr을 Daum으로 연결한다고 해서 고객이나 회사가 손해를 입는다면, 아니면 수익에 손해를 끼쳤다는 게 확인되면 (잠재고객 이탈?) 그때 그 건에 대한 소송을 걸어야지.</p>
 
-<p>Daum에 찾아가서 '쟤네가 A나 ALIAS를 Daum에 걸어놓았으니, 쟤네를 제제해주십시오'라고 부탁해야하는거 아닌가?</p>
+<p>Daum에 찾아가서 '쟤네가 A나 ALIAS를 Daum에 걸어놓았으니, 쟤네를 제재해주십시오'라고 부탁해야 하는 거 아닌가?</p>
 
-<p>상표권을 침해하는 것도 아니고, 피싱 등 범죄를 저질른 것도 아니고, 고작 리다이렉팅이라고.</p>
+<p>상표권을 침해하는 것도 아니고, 피싱 등 범죄를 저지른 것도 아니고, 고작 리다이렉팅이라고.</p>
 
-<p>전략아니야?</p>
+<p>전략 아니야? 21C 알박기라고.</p>
+
+<p>도메인이 그렇게 빡세게 한정적인 자원이라고 생각하지 않는게, 분명 도메인을 표현하는 Regular Expression에 의해 Max로 사용할 수 있는 도메인이 한정되어 있겠지만, 여전히 TLD는 증가하고있고, 우리가 아직 도메인이 포화상태라는 말을 못 들었으므로 충분히 남아 돌 것이라고 생각.</p>
+
+<p>그냥 마케팅 창구로 활용할 수 있는 것들 중 하나가 다른사람이 선점한 거라고 생각해야지뭐.</p>
 
 <h4>'언제부터 도메인 거래가 위법이었지?'</h4>
 
-<p>인터넷을 서핑하다보면 필연적으로 마주치게 되는 <strong>Parking 사이트</strong>들에 노출되게 되는데,</p>
+<p>인터넷을 서핑하다 보면 필연적으로 마주치게 되는 <strong>Parking 사이트</strong>들에 노출되게 되는데,</p>
 
 <ul>
 <li>이는 기존에 있던 URL의 도메인이 만료(또는 사용중지)되었을 때</li>
 <li>그 도메인이 뿌린 URL 등의 가치를 높게 산정한 누군가가 (또는 자신이)</li>
 <li>도메인을 구매하고 Parking 사이트에 연결시켜서</li>
-<li>일반사용자에게는 광고를 (수수료를 나눠 먹는다.)</li>
+<li>일반사용자에게는 광고를 (수수료를 나눠 먹는다)</li>
 <li>도메인을 원하는 사용자와는 거래를 시도한다. (여기에서도 수수료를 얌)</li>
 </ul>
 <p><a href="http://clien.net/cs2/bbs/board.php?bo_table=cm_main&amp;wr_id=35207&amp;page=2">[도메인당] 도메인 파킹 ABC</a></p>
@@ -407,22 +163,26 @@ blahblah.kr를 구매하는데 blahblah.com을 구매하는데 blahblah.jp를 �
 
 <p>이걸로 돈을 벌고 있는 회사가 꾸준히 있다. 레드오션이라고.</p>
 
-<h5>Q. 왜 우리는 도메인으로 돈을 못버는가? 금액을 선제시하면 안되?</h5>
+<h5>Q. 왜 우리는 도메인으로 돈을 못 버는가? 금액을 선제시하면 안돼?</h5>
 
-<h5>Q. 사용목적을 왜 증명해야 하는가? 그럴꺼면 신청할 때 사업기획서를 받아야지.</h5>
+<h5>Q. 사용 목적을 왜 증명해야 하는가? 그럴꺼면 신청할 때 사업기획서를 받아야지.</h5>
 
-<h5>Q. 도메인 연장을 금지시켜주면 되잖아. 왜 말소야?</h5>
+<h5>Q. 도메인 연장을 금지하면 되잖아. 왜 하필 말소야?</h5>
+
+<p>말소는 또 뭘까? line.co.kr은 앞으로 누구도 못 쓰는 걸까? 아니면 계약이 해지되어서 누구나 구입할  수 있는 걸까? 아마도 후자겠지만 어떤 쪽이든 꿀잼이 흐를 것으로 예상된다.</p>
 
 <h3>URL의 U는 Unique이다.</h3>
 
-<h4>더이상 내 도메인이 아니면, 내가 뿌려놓은 (뿌려진) URL은 어떻게 되는건데?</h4>
+<h4>더 이상 내 도메인이 아니면, 내가 뿌려놓은 (뿌려진) URL은 어떻게 되는건데?</h4>
 
-<p>몇년 전, Shortest URL의 유행이 시작하던 때에, 미국 유명 신문사가 (아마 뉴욕타임즈일듯) 이미 온라인으로 뿌려진 많은 단축 URL들로 자사의 사이트에 접속할 수 없게 되면서, 이를 되찾기 위해 많은 노력을 들였던 적이 있었다. (아마 기존 사이트의 URL체계가 바뀌었거나, 단축URL 사이트 자체가 날아간 거겠지)</p>
+<p>몇 년 전, Shortest URL의 유행이 시작하던 때에, 미국 유명 신문사가 (아마 뉴욕타임즈일 듯)(찾아보겠습니다) 이미 온라인으로 뿌려진 많은 단축 URL들로 자사의 사이트에 접속할 수 없게 되면서, 이를 되찾기 위해 많은 노력을 들였던 적이 있었다. (아마 기존 사이트의 URL 체계가 바뀌었거나, 단축 URL 사이트 자체가 날아간 거겠지?)</p>
 
-<p>이미 웹에 뿌려진 URL들에게 최신 Domain을 전달해 주는 프로파게이션 프로토콜도 없잖아?
-그래서 내가 이걸 잘 쓰고 있다고 주장해야 하는거야?</p>
+<p>이미 웹에 뿌려진 URL들에게 최신 Domain을 전달해 주는 프로파게이션 프로토콜도 없잖아? 메타데이터로 관리하고 있는 것도 아니고?
+그래서 내가 이걸 잘 쓰고 있다고 주장해야 하는 거야?</p>
 
-<h3>이젠 Namecoin을 알아보아야 할 때</h3>
+<h3>Namecoin는 해결책이 될 수 있나?</h3>
+
+<p>...</p>
 
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
@@ -738,6 +498,254 @@ pyenv <span class="nb">local </span>3.5.1-flask
 </li>
 </ol>
 <p>(이 글은 선린인터넷고 학생들의 Flask 교육을 위해 쓰여졌습니다.)</p>
+</div>
+            </div>
+        </div>
+        <div class="post">
+            <h1 class="title"><a href="posts/popo/"> POPO</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2015-12-12T15:01:03+09:00">2015-12-12 15:01</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                
+            </div>
+            <div class="body">
+                <div>
+<h2>POPO</h2>
+
+<p>Define everything using POPOs (Plain Old Python Object), then you can easily use it from SQLAlchemy ORM, Protobuf3, and so on.</p>
+
+<h3>Wanted Goals</h3>
+
+<ul>
+<li>Python 3</li>
+<li>$ popo input.py
+
+<ul>
+<li>-&gt; input.sqla.py</li>
+<li>-&gt; input.proto</li>
+</ul>
+</li>
+<li>POPO input files just work as normal python file</li>
+<li>Pipeline:
+
+<ul>
+<li>Read Input</li>
+<li>Convert to Own DataTypes</li>
+<li>Target Factories</li>
+<li>Outputs</li>
+</ul>
+</li>
+</ul>
+<h3>Wanted Types</h3>
+
+<ul>
+<li>
+<a href="https://docs.python.org/3/reference/datamodel.html#the-standard-type-hierarchy">Python Default Types</a>
+
+<ul>
+<li>Numeric thingy: Integer, Float, Double, ...</li>
+<li>String</li>
+<li>List</li>
+<li>Bytes</li>
+</ul>
+</li>
+<li><a href="https://docs.python.org/3.5/library/datetime.html#datetime.datetime.now">DateTime</a></li>
+<li>Enum</li>
+<li>...</li>
+</ul>
+<h3>Wanted Targets</h3>
+
+<ul>
+<li><a href="http://www.sqlalchemy.org/">SQLAlchemy ORM</a></li>
+<li><a href="https://developers.google.com/protocol-buffers/docs/proto3#scalar">Protobuf</a></li>
+<li>...</li>
+</ul>
+<h3>Wanted Features</h3>
+
+<ul>
+<li>Versioning
+
+<ul>
+<li>SQLAlchemy will cover this by alembic</li>
+<li>Protobuf need to consider this
+
+<ul>
+<li>read olders and managing the </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Targets Factory and Configurable Targets? (custom type converter?)
+
+<ul>
+<li>want to export with
+
+<ul>
+<li><a href="https://github.com/kvesteri/sqlalchemy-utils">sqlalchemy-utils</a></li>
+<li><a href="https://github.com/Pr0Ger/protobuf3">protobuf3</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Prefix/Postfix naming</li>
+<li>...</li>
+</ul>
+<h3>Resolved Question</h3>
+
+<ul>
+<li>
+<a href="https://www.python.org/dev/peps/pep-0484/">PEP 484 - Type Hints</a>?
+
+<ul>
+<li>Nope, it's not for class defining.</li>
+</ul>
+</li>
+<li>
+<a href="http://python3porting.com/fixers.html">How to get parse tree of python?</a>
+
+<ul>
+<li>ast: "designed to generate an abstract syntax tree and ignores all comments and formatting"</li>
+<li>parser: "internal code parser, which is optimized to generate byte code and too low level"</li>
+<li>lib2to3: "high level and contains all formatting, but that doesn’t mean it’s easy to use"
+
+<ul>
+<li>Why don't you just make 2to3 fixer for converting those?
+
+<ul>
+<li>I don't think 2to3 is not for it.</li>
+</ul>
+</li>
+<li>how to get the parse tree form lib2to3?
+
+<ul>
+<li>lib2to3.pgen2, but it's for python2 (maybe)
+
+<ul>
+<li>oops, our target is python3</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>yo yo yo yo yo!!! We don't need to parse! We just used class.
+
+<ul>
+<li>So Class.__dict__() and instanceof() will cover all.
+
+<ul>
+<li>really? dive it now!
+
+<ul>
+<li>import <code>popo-input</code>
+
+<ul><li>
+</li></ul>
+</li>
+<li>dir(<code>popo-input</code>)
+
+<ul><li>
+</li></ul>
+</li>
+<li>.__dict__
+
+<ul><li>
+</li></ul>
+</li>
+<li>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>Unresolved Questions</h3>
+
+<ul>
+<li>Is really needed? helpful?</li>
+<li>How to ...
+
+<ul>
+<li>save datetime @ protobuf?
+
+<ul>
+<li>maybe timestamp and timezone.</li>
+</ul>
+</li>
+<li>manage the build?</li>
+<li>name exported output?</li>
+<li>limit the type of contents?</li>
+<li>limit the size of string with this?
+
+<ul>
+<li>using comment? (noooooooooo..)</li>
+<li>using </li>
+</ul>
+</li>
+<li>manage the metadata of input/output source code?
+
+<ul>
+<li>why need it?
+
+<ul>
+<li>...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Where is the gap for adding versioning process.</li>
+<li>No Private / Forgien Key?!</li>
+<li>Nested Class!</li>
+<li>Alphabetical Order Class Contents?!!!</li>
+<li>How to save the order of input, and keep it as output?!!!!!!!!!! &lt;- currently biggest mission blocker (lib2to3 needed?)</li>
+</ul>
+<h3>TODO</h3>
+
+<ul>
+<li>.gitignore</li>
+</ul>
+<h3>Milestone</h3>
+
+<ol>
+<li>Set the clear blueprint for v0.0.0 (due: 151115)
+
+<ul>
+<li>minimum wanted-types: 
+
+<ul>
+<li>integer</li>
+<li>string</li>
+<li>?</li>
+</ul>
+</li>
+<li>2 targets
+
+<ul>
+<li>sqlalchemy</li>
+<li>protobuf</li>
+</ul>
+</li>
+<li>1 feature
+
+<ul>
+<li>target factory</li>
+</ul>
+</li>
+<li>Goal: directory design</li>
+<li>Goal: pipeline design</li>
+</ul>
+</li>
+<li>...</li>
+</ol>
 </div>
             </div>
         </div>
