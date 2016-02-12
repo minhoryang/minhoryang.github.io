@@ -1,0 +1,1 @@
+domain-wasnt-covered-with-the-real-rights.en.md
