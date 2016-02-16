@@ -72,6 +72,7 @@
 
 		```bash
 		mkdir MY_SWEET_NEW_PROJECT_HOME
+		cd MY_SWEET_NEW_PROJECT_HOME
 		pyenv local 3.5.1-flask
 		```
 	- 필요한 Python 패키지 설치
