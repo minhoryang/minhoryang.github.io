@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/archive.html</loc>
-  <lastmod>2016-02-16T08:00:00Z</lastmod>
+  <lastmod>2016-02-16T08:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/categories/</loc>
@@ -103,7 +103,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/index-1.html</loc>
-  <lastmod>2016-02-16T08:45:00Z</lastmod>
+  <lastmod>2016-02-16T08:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/api/</loc>
@@ -124,6 +124,11 @@
   <loc>https://minhoryang.github.io/en/posts/cloudampq-rabbitmq-aas-i_heard_it/</loc>
   <lastmod>2016-01-26T17:16:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/cloudampq-rabbitmq-aas-i_heard_it/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/en/posts/connect-aws-ec2-instance-with-pycharm-professional/</loc>
+  <lastmod>2016-01-26T17:16:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ko" href="https://minhoryang.github.io/ko/posts/connect-aws-ec2-instance-with-pycharm-professional/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/en/posts/domain-wasnt-covered-with-the-real-rights/</loc>
@@ -184,7 +189,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/archive.html</loc>
-  <lastmod>2016-02-16T08:00:00Z</lastmod>
+  <lastmod>2016-02-16T08:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/categories/</loc>
@@ -264,7 +269,7 @@
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/index-1.html</loc>
-  <lastmod>2016-02-16T08:45:00Z</lastmod>
+  <lastmod>2016-02-16T08:54:00Z</lastmod>
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/annyeonghaseyo/</loc>
@@ -290,6 +295,11 @@
   <loc>https://minhoryang.github.io/ko/posts/cloudampq-rabbitmq-aas-i_heard_it/</loc>
   <lastmod>2016-01-26T17:16:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/cloudampq-rabbitmq-aas-i_heard_it/" />
+ </url>
+ <url>
+  <loc>https://minhoryang.github.io/ko/posts/connect-aws-ec2-instance-with-pycharm-professional/</loc>
+  <lastmod>2016-02-16T08:49:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="en" href="https://minhoryang.github.io/en/posts/connect-aws-ec2-instance-with-pycharm-professional/" />
  </url>
  <url>
   <loc>https://minhoryang.github.io/ko/posts/domain-wasnt-covered-with-the-real-rights/</loc>
