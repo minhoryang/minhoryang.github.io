@@ -33,6 +33,65 @@ article: http://ogp.me/ns/article#
 
         </ul></section><section class="page-content"><div class="content" rel="main">
         <div class="post">
+            <h1 class="title"><a href="posts/connect-aws-ec2-instance-with-pycharm-professional/">Connect AWS EC2 Instance with PyCharm Professional</a></h1>
+            <div class="meta">
+                <div class="authordate">
+                    <time class="timeago" datetime="2016-02-16T17:49:43+09:00">2016-02-16 17:49</time>
+</div>
+                <div class="stats">
+                    
+                </div>
+                
+            </div>
+            <div class="body">
+                <ul>
+<li><p><strong>Download <a href="https://www.jetbrains.com/pycharm/download/index.html">Pycharm Professional</a></strong> and Install it.
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/01_pycharm_download_webpage.png" alt="Pycharm Professional Download Page"></p></li>
+<li><p>Launch PyCharm - <strong>Check out from Github</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/02_pycharm_main_for_checkout_github.png" alt='Select "Check out from Version Control - Github"'></p></li>
+<li><p>Login - <strong>Clone Repository</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/03_pycharm_clone_project.png" alt="Select Projects"></p></li>
+<li><p>Open it
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/04_pycharm_open_project.png" alt=""></p></li>
+<li><p><strong>Tools - Deployments - Configuration</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/05_pycharm_tools_deployment_configuration.png" alt=""></p></li>
+<li>
+<p><strong>Add SFTP Server</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/06_pycharm_tools_deployment_configuration_add_aws_sftp.png" alt=""></p>
+
+<ul>
+<li>SFTP Host : <strong>Elastic IP</strong> or Public DNS</li>
+<li>Root Path : <strong>Autodetect</strong>
+</li>
+<li>User Name : <code>ubuntu</code> (default for AWS Ubuntu)</li>
+<li>Auth Type : <strong>Key Pair</strong>
+</li>
+<li>Private Key File</li>
+<li>Web server root URL : <code>http://HOST:PORT</code>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/07_pycharm_tools_deployment_configuration_add_aws_sftp_details.png" alt="">
+</li>
+<li>Set <strong>Deployment path</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/08_pycharm_tools_deployment_configuration_add_aws_sftp_details_mapping.png" alt="">
+</li>
+</ul>
+</li>
+<li><p>Check <strong>Automatic Upload</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/09_pycharm_tools_deployment_auto_upload.png" alt=""></p></li>
+<li><p><strong>Preferences - Project - Project Interpreter - Add Remote</strong>
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/10_preferences_project_interpreter.png" alt=""></p></li>
+<li>
+<p>Use <strong>Deployment Configuration</strong></p>
+
+<ul>
+<li>Set <strong>your interpreter path</strong> (<strong>NEED TO BE CHANGE HERE!</strong>)
+<img src="https://minhoryang.github.io/_/connect-aws-ec2-instance-with-pycharm-professional.en.md/11_preferences_project_interpreter_deployment.png" alt="">
+</li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+        <div class="post">
             <h1 class="title"><a href="posts/domain-wasnt-covered-with-the-real-rights/">Domain wasn't covered with the real rights</a></h1>
             <div class="meta">
                 <div class="authordate">
@@ -1215,27 +1274,6 @@ but by [ci skip] will be located with every my normal environment pushes.</p>
             </div>
             <div class="body">
                 <p>Nice! <a href="https://www.cloudamqp.com/">https://www.cloudamqp.com/</a></p>
-            </div>
-        </div>
-        <div class="post">
-            <h1 class="title"><a href="posts/apple-app-store-review-guidelines-i_read_it/">Apple App Store Review Guidelines - #I_READ_IT</a></h1>
-            <div class="meta">
-                <div class="authordate">
-                    <time class="timeago" datetime="2015-10-19T20:45:26+09:00">2015-10-19 20:45</time>
-</div>
-                <div class="stats">
-                    
-                </div>
-                        <div itemprop="keywords" class="tags">
-        <ul>
-        태그 : 
-           <li><a class="tag p-category" href="categories/i_read_it/" rel="tag">I_READ_IT</a></li>
-        </ul>
-</div>
-
-            </div>
-            <div class="body">
-                <p>Write your post here.</p>
             </div>
         </div>
             <nav class="postindexpager"><ul class="pager">
