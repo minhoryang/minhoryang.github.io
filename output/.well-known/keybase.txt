@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/minhoryang
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://minhoryang.github.io
+  * I am minhoryang (https://keybase.io/minhoryang) on keybase.
+  * I have a public key ASDIfWUqi6SUdsCIvozcNp-mTNnhPMaPj553RJJ209keaQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120c87d652a8ba49476c088be8cdc369fa64cd9e13cc68f8f9e77449276d3d91e690a",
+            "host": "keybase.io",
+            "kid": "0120c87d652a8ba49476c088be8cdc369fa64cd9e13cc68f8f9e77449276d3d91e690a",
+            "uid": "55e633195b4ccfc60df3e5c330b40819",
+            "username": "minhoryang"
+        },
+        "service": {
+            "hostname": "minhoryang.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.16"
+    },
+    "ctime": 1470406314,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1470406160,
+        "hash": "748f8f25008dc32f05fc76535fac1fe3acfc631fa0aacfd134c83e59b1714991a6d73294f7e4b6943554520086bc321cfb23a54c81c0b738bc308bed73138423",
+        "seqno": 561054
+    },
+    "prev": "25cfc47430533b0c5af64ec34644f79c9b62eb8df1b1733a7782bbd41d4069dc",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyH1lKouklHbAiL6M3DafpkzZ4TzGj4+ed0SSdtPZHmkKp3BheWxvYWTFAv97ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzg3ZDY1MmE4YmE0OTQ3NmMwODhiZThjZGMzNjlmYTY0Y2Q5ZTEzY2M2OGY4ZjllNzc0NDkyNzZkM2Q5MWU2OTBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzg3ZDY1MmE4YmE0OTQ3NmMwODhiZThjZGMzNjlmYTY0Y2Q5ZTEzY2M2OGY4ZjllNzc0NDkyNzZkM2Q5MWU2OTBhIiwidWlkIjoiNTVlNjMzMTk1YjRjY2ZjNjBkZjNlNWMzMzBiNDA4MTkiLCJ1c2VybmFtZSI6Im1pbmhvcnlhbmcifSwic2VydmljZSI6eyJob3N0bmFtZSI6Im1pbmhvcnlhbmcuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTYifSwiY3RpbWUiOjE0NzA0MDYzMTQsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ3MDQwNjE2MCwiaGFzaCI6Ijc0OGY4ZjI1MDA4ZGMzMmYwNWZjNzY1MzVmYWMxZmUzYWNmYzYzMWZhMGFhY2ZkMTM0YzgzZTU5YjE3MTQ5OTFhNmQ3MzI5NGY3ZTRiNjk0MzU1NDUyMDA4NmJjMzIxY2ZiMjNhNTRjODFjMGI3MzhiYzMwOGJlZDczMTM4NDIzIiwic2Vxbm8iOjU2MTA1NH0sInByZXYiOiIyNWNmYzQ3NDMwNTMzYjBjNWFmNjRlYzM0NjQ0Zjc5YzliNjJlYjhkZjFiMTczM2E3NzgyYmJkNDFkNDA2OWRjIiwic2Vxbm8iOjEzLCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQLCFHCXYq0QLRSDA2L6EldDxsgBwPQoRFz84p6IF7X3T21SgjUW55R84An4K2BHPYeA9MVzkGsgXOJHFXdHAKQKoc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCDEQOfjg8IIn1tA1VsU6PEV4uQvakmQz4h79utFCNpgGqN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/minhoryang
+
+==================================================================
