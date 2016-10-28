@@ -223,7 +223,7 @@ OS X의 매우 Deep한 설정을 바꿀 수 있다. 한줄한줄 읽어보며 �
 
   - Mac에 기본으로 깔려있는 Vim을 이용하려면 이런 .vimrc가 필요하더라.
 
-    ```
+    ```text
     # .vimrc
     syntax on
     set backspace=2
@@ -248,7 +248,7 @@ OS X의 매우 Deep한 설정을 바꿀 수 있다. 한줄한줄 읽어보며 �
 
     - **[rhysd/committia.vim](https://github.com/rhysd/committia.vim)** 로 `git commit`을 편하게 진행한다.
 
-      ```
+      ```text
       # .gitconfig
       [diff]
               tool = nvimdiff
@@ -350,26 +350,30 @@ OS X의 매우 Deep한 설정을 바꿀 수 있다. 한줄한줄 읽어보며 �
 ### Command Line Tools
 
 - 개발
-  - anyenv:
-    - pyenv
-    - ndenv
+  - [anyenv](https://github.com/riywo/anyenv):
+    - [pyenv](https://github.com/yyuu/pyenv)
+
+      [pyenv-virtualenv](https://github.com/yyuu/pyenv-virtualenv)
+      [pyenv-update](https://github.com/yyuu/pyenv-update)
+      [pyenv-implict](https://github.com/concordusapps/pyenv-implict)
+
+    - [ndenv](https://github.com/riywo/ndenv)
   - XCode + Swift:
     - [fastlane](https://fastlane.tools/)Ⓑ
     - [synx](https://github.com/venmo/synx)Ⓑ
-    - carthageⒷ
-    - swiftlintⒷ
-    - xctoolⒷ
-    - codeclimateⒷ
+    - [carthage](https://github.com/Carthage/Carthage)Ⓑ
+    - [swiftlint](https://github.com/realm/SwiftLint)Ⓑ
+    - [xctool](https://github.com/facebook/xctool)Ⓑ
+    - [codeclimate](https://github.com/codeclimate/codeclimate)Ⓑ
   - 환경:
-    - dockerⒷ
-      docker-machineⒷ
-      docker-composeⒷ
+    - [docker]()Ⓑ
+      [docker-machine]()Ⓑ
+      [docker-compose]()Ⓑ
       - 이 세개를 [**Docker for Mac**]() 으로 설치하는게 더 좋다!
     - docker-rsync
     - **git**Ⓑ
       **git-lfs**Ⓑ
     - **vim**Ⓑ
-  - ​
 - 보안
   - upgrade:
     - **openssh**Ⓑ
@@ -414,10 +418,6 @@ OS X의 매우 Deep한 설정을 바꿀 수 있다. 한줄한줄 읽어보며 �
   - boom
   - caddy
   - ntfy
-
-### 보안
-
-
 
 
 
