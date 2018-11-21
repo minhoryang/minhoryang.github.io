@@ -30,7 +30,6 @@ from __future__ import unicode_literals
 
 import codecs
 import os
-import re
 
 try:
     import misaka
@@ -45,30 +44,38 @@ except ImportError:
     gist_extension = None
     podcast_extension = None
 
+from nikola import shortcodes as sc
 from nikola.plugin_categories import PageCompiler
 from nikola.utils import makedirs, req_missing, write_metadata
 
 
-import houdini as h
-from pygments import highlight
-from pygments.formatters import HtmlFormatter
-from pygments.lexers import get_lexer_by_name
-
+# XXX(minhoryang): Code Highlighter!
 def CodeHighlighter(data, extensions):
-    class HighlighterRenderer(misaka.HtmlRenderer):
+    # XXX: COPIED from http://misaka.61924.nl/
+    import houdini as h
+    import misaka as m
+    from pygments import highlight
+    from pygments.formatters import HtmlFormatter, ClassNotFound
+    from pygments.lexers import get_lexer_by_name
+
+    class HighlighterRenderer(m.HtmlRenderer):
         def blockcode(self, text, lang):
-            if not lang:
-                return '\n<pre><code>{}</code></pre>\n'.format(
-                    h.escape_html(text.strip()))
+            try:
+                lexer = get_lexer_by_name(lang, stripall=True)
+            except ClassNotFound:
+                lexer = None
 
-            lexer = get_lexer_by_name(lang, stripall=True)
-            formatter = HtmlFormatter()
+            if lexer:
+                formatter = HtmlFormatter()
+                return highlight(text, lexer, formatter)
+            # default
+            return '\n<pre><code>{}</code></pre>\n'.format(
+                                h.escape_html(text.strip()))
 
-            return highlight(text, lexer, formatter)
     renderer = HighlighterRenderer()
-    md = misaka.Markdown(renderer, extensions=extensions)
+    # XXX: END
+    md = m.Markdown(renderer, extensions=extensions)
     return md(data)
-    #return misaka.html(data, extensions=extensions)
 
 
 class CompileMisaka(PageCompiler):
@@ -83,22 +90,42 @@ class CompileMisaka(PageCompiler):
             self.ext = misaka.EXT_FENCED_CODE | misaka.EXT_STRIKETHROUGH | \
                 misaka.EXT_AUTOLINK | misaka.EXT_NO_INTRA_EMPHASIS
 
-    def compile_html(self, source, dest, is_two_file=True):
+    def compile_string(self, data, source_path=None, is_two_file=True, post=None, lang=None):
+        """Compile the source file into HTML strings (with shortcode support).
+
+        Returns a tuple of at least two elements: HTML string [0] and shortcode dependencies [last].
+        """
+        if misaka is None:
+            req_missing(['misaka'], 'build this site (compile with misaka)')
+        if not is_two_file:
+            _, data = self.split_metadata(data, post, lang)
+        new_data, shortcodes = sc.extract_shortcodes(data)
+        # XXX(minhoryang): before CodeHighlighter
+        # output = misaka.html(new_data, extensions=self.ext)
+        output = CodeHighlighter(new_data, extensions=self.ext)
+        output, shortcode_deps = self.site.apply_shortcodes_uuid(output, shortcodes, filename=source_path, extra_context={'post': post})
+        return output, shortcode_deps
+
+    def compile(self, source, dest, is_two_file=True, post=None, lang=None):
+        """Compile the source file into HTML and save as dest."""
         if misaka is None:
             req_missing(['misaka'], 'build this site (compile with misaka)')
         makedirs(os.path.dirname(dest))
         with codecs.open(dest, "w+", "utf8") as out_file:
             with codecs.open(source, "r", "utf8") as in_file:
                 data = in_file.read()
-            if not is_two_file:
-                data = re.split('(\n\n|\r\n\r\n)', data, maxsplit=1)[-1]
-            output = CodeHighlighter(data, extensions=self.ext)
+            output, shortcode_deps = self.compile_string(data, source, is_two_file, post, lang)
             out_file.write(output)
+        if post is None:
+            if shortcode_deps:
+                self.logger.error(
+                    "Cannot save dependencies for post {0} (post unknown)",
+                    source)
+        else:
+            post._depfile[dest] += shortcode_deps
 
-    def create_post(self, path, **kw):
-        content = kw.pop('content', 'Write your post here.')
-        onefile = kw.pop('onefile', False)
-        kw.pop('is_page', False)
+    def create_post(self, path, content=None, onefile=False, is_page=False, **kw):
+        """Create post file with optional metadata."""
         metadata = OrderedDict()
         metadata.update(self.default_metadata)
         metadata.update(kw)
