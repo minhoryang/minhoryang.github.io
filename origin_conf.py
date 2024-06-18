@@ -82,7 +82,7 @@ REDIRECTIONS = []
 DEPLOY_COMMANDS = {
     'default': [
         "git push origin source",
-        "git subtree push --prefix output origin master",
+        "git subtree push --force --prefix output origin master",
     ]
 }
 

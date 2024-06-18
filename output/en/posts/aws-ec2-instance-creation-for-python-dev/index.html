@@ -60,8 +60,7 @@ Instances 탭에서 자신의 Name을 가진 Instance가 있는지 확인한다.
             
         </div>
         <div class="body">
-            <div>
-<h2>Instance 생성</h2>
+            <h2>Instance 생성</h2>
 
 <ol>
 <li>
@@ -87,26 +86,26 @@ Instances 탭에서 자신의 Name을 가진 Instance가 있는지 확인한다.
 <ol>
 <li>
 <p>다운 받은 <strong>Key Pair (.pem) 파일</strong>과 EC2의 Instances탭에서 보이는 <strong>Public DNS</strong>를 이용하여 Instance에 접속!</p>
-<div class="highlight"><pre><span></span>ssh -i DOWNLOADED.pem ubuntu@MY_PUBLIC_DNS
+<div class="highlight"><pre><span></span>ssh<span class="w"> </span>-i<span class="w"> </span>DOWNLOADED.pem<span class="w"> </span>ubuntu@MY_PUBLIC_DNS
 </pre></div>
 </li>
 <li>
 <p>다양한 Python Version을 문제없이 사용하기 위한 Pyenv 설치:</p>
 
 <p><a href="https://github.com/yyuu/pyenv-installer">pyenv-installer</a>의 명령줄 사용</p>
-<div class="highlight"><pre><span></span>sudo apt-get update
-sudo apt-get install git
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer <span class="p">|</span> bash
+<div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>git
+curl<span class="w"> </span>-L<span class="w"> </span>https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
 </pre></div>
 
 <p>설치 후  아래의 부분을 <code>~/.bash_profile</code> 에 추가</p>
-<div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">"/home/ubuntu/.pyenv/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
-<span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>pyenv init -<span class="k">)</span><span class="s2">"</span>
-<span class="nb">eval</span> <span class="s2">"</span><span class="k">$(</span>pyenv virtualenv-init -<span class="k">)</span><span class="s2">"</span>
+<div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"/home/ubuntu/.pyenv/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>pyenv<span class="w"> </span>init<span class="w"> </span>-<span class="k">)</span><span class="s2">"</span>
+<span class="nb">eval</span><span class="w"> </span><span class="s2">"</span><span class="k">$(</span>pyenv<span class="w"> </span>virtualenv-init<span class="w"> </span>-<span class="k">)</span><span class="s2">"</span>
 </pre></div>
 
 <p>~/.bash_profile 실행</p>
-<div class="highlight"><pre><span></span>. ~/.bash_profile
+<div class="highlight"><pre><span></span>.<span class="w"> </span>~/.bash_profile
 </pre></div>
 </li>
 <li>
@@ -115,29 +114,29 @@ curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-
 <ul>
 <li>
 <p><a href="https://github.com/yyuu/pyenv/wiki/Common-build-problems">파이선을 빌드하기 위한 패키지들을 설치</a></p>
-<div class="highlight"><pre><span></span>sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev
+<div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>make<span class="w"> </span>build-essential<span class="w"> </span>libssl-dev<span class="w"> </span>zlib1g-dev<span class="w"> </span>libbz2-dev<span class="w"> </span>libreadline-dev<span class="w"> </span>libsqlite3-dev<span class="w"> </span>wget<span class="w"> </span>curl<span class="w"> </span>llvm<span class="w"> </span>libncurses5-dev
 </pre></div>
 </li>
 <li>
 <p>원하는 Python 버전 설치</p>
-<div class="highlight"><pre><span></span>pyenv install <span class="m">3</span>.5.1
+<div class="highlight"><pre><span></span>pyenv<span class="w"> </span>install<span class="w"> </span><span class="m">3</span>.5.1
 </pre></div>
 </li>
 <li>
 <p>프로젝트 별 패키지 분리를 위해 <code>Virtualenv</code>를 적용</p>
-<div class="highlight"><pre><span></span>pyenv virtualenv <span class="m">3</span>.5.1 <span class="m">3</span>.5.1-flask
+<div class="highlight"><pre><span></span>pyenv<span class="w"> </span>virtualenv<span class="w"> </span><span class="m">3</span>.5.1<span class="w"> </span><span class="m">3</span>.5.1-flask
 </pre></div>
 </li>
 <li>
 <p>원하는 프로젝트 폴더에서 특정 Python 환경을 사용하도록 설정</p>
-<div class="highlight"><pre><span></span>mkdir MY_SWEET_NEW_PROJECT_HOME
-<span class="nb">cd</span> MY_SWEET_NEW_PROJECT_HOME
-pyenv <span class="nb">local</span> <span class="m">3</span>.5.1-flask
+<div class="highlight"><pre><span></span>mkdir<span class="w"> </span>MY_SWEET_NEW_PROJECT_HOME
+<span class="nb">cd</span><span class="w"> </span>MY_SWEET_NEW_PROJECT_HOME
+pyenv<span class="w"> </span><span class="nb">local</span><span class="w"> </span><span class="m">3</span>.5.1-flask
 </pre></div>
 </li>
 <li>
 <p>필요한 Python 패키지 설치</p>
-<div class="highlight"><pre><span></span>pip install flask
+<div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>flask
 </pre></div>
 </li>
 </ul>
@@ -154,7 +153,6 @@ pyenv <span class="nb">local</span> <span class="m">3</span>.5.1-flask
 </li>
 </ol>
 <p>(이 글은 선린인터넷고 학생들의 Flask 교육을 위해 쓰여졌습니다.)</p>
-</div>
         </div>
                 <ul class="pager hidden-print">
 <li class="previous">
@@ -165,7 +163,7 @@ pyenv <span class="nb">local</span> <span class="m">3</span>.5.1-flask
             </li>
         </ul>
 </div>
-                    <footer id="footer"><p>Contents © 2018         <a href="mailto:joe@demo.site">Your Name</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+                    <footer id="footer"><p>Contents © 2024         <a href="mailto:joe@demo.site">Your Name</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>

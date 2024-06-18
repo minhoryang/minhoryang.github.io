@@ -31,11 +31,7 @@ from __future__ import unicode_literals
 import codecs
 import os
 
-try:
-    import misaka
-except ImportError:
-    misaka = None  # NOQA
-    nikola_extension = None
+import misaka
 try:
     from collections import OrderedDict
 except ImportError:
@@ -53,12 +49,12 @@ from nikola.utils import makedirs, req_missing, write_metadata
 def CodeHighlighter(data, extensions):
     # XXX: COPIED from http://misaka.61924.nl/
     import houdini as h
-    import misaka as m
+    import misaka
     from pygments import highlight
     from pygments.formatters import HtmlFormatter, ClassNotFound
     from pygments.lexers import get_lexer_by_name
 
-    class HighlighterRenderer(m.HtmlRenderer):
+    class HighlighterRenderer(misaka.HtmlRenderer):
         def blockcode(self, text, lang):
             try:
                 lexer = get_lexer_by_name(lang, stripall=True)
@@ -74,7 +70,7 @@ def CodeHighlighter(data, extensions):
 
     renderer = HighlighterRenderer()
     # XXX: END
-    md = m.Markdown(renderer, extensions=extensions)
+    md = misaka.Markdown(renderer, extensions=extensions)
     return md(data)
 
 

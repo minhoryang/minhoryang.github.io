@@ -1,6 +1,6 @@
 [Core]
 Name = misaka
-Module = misaka
+Module = misakaka
 
 [Nikola]
 PluginCategory = PageCompiler
